@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"types": ["vite/client", "vite-plugin-svgr/client"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"paths": {
+			"api/*": ["src/api/*"],
+			"assets/*": ["src/assets/*"],
+			"components/*": ["src/components/*"],
+			"env/*": ["src/env/*"],
+			"models/*": ["src/models/*"],
+			"pages/*": ["src/pages/*"],
+			"server/*": ["src/server/*"],
+			"shared/*": ["src/shared/*"],
+			"utils/*": ["src/utils/*"]
+		}
+	},
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "tailwind.config.js"],
+	"exclude": ["node_modules"]
+}

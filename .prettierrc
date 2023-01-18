@@ -1,0 +1,27 @@
+{
+	"semi": true,
+	"trailingComma": "none",
+	"useTabs": true,
+	"tabWidth": 1,
+	"arrowParens": "always",
+	"bracketSpacing": true,
+	"insertPragma": false,
+	"jsxSingleQuote": true,
+	"singleQuote": true,
+	"jsxBracketSameLine": false,
+	"printWidth": 100,
+	"importOrder": [
+		"react",
+		"^(?!react)\\w+$",
+		"^assets/(.*)$",
+		"^components/(.*)$",
+		"^env/(.*)$",
+		"^models/(.*)$",
+		"^server/(.*)$",
+		"^shared/(.*)$",
+		"^utils/(.*)$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}
