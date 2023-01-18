@@ -1,9 +1,7 @@
 /* eslint-env node */
 module.exports = {
 	content: (() => {
-		const pathsToScan = [
-			'./src/**/*.{js,jsx,ts,tsx}',
-		];
+		const pathsToScan = ['./src/**/*.{js,jsx,ts,tsx}'];
 		return pathsToScan;
 	})(),
 
@@ -13,6 +11,17 @@ module.exports = {
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/aspect-ratio'),
-		require('@tailwindcss/forms'),
-	]
+		require('@tailwindcss/forms')
+	],
+	theme: {
+		extend: {
+			colors: {
+				primary: '#0071B8'
+			},
+			fontFamily: {
+				smooch: 'Smooch Sans'
+				// sf: 'SF UI Display'
+			}
+		}
+	}
 };

@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { Field, useFormikContext } from 'formik';
 
-/* eslint-disable-line */
 export const Text = ({
 	type = 'text',
 	className,
@@ -10,14 +9,13 @@ export const Text = ({
 	placeholder,
 	disabled,
 	forcedTouched
-}: // ...props
-TextProps) => {
+}: TextProps) => {
 	const { values, errors, touched } = useFormikContext<any>();
 
 	const inputClassName = clsx(
+		'focus:border-gray-500 focus:ring-gray-500',
 		'block rounded-md border border-gray-300 focus:border-gray-500 focus:ring-gray-500',
-		'text-sm w-full',
-		'py-0 px-1',
+		'text-md w-full',
 		'disabled:opacity-50 disabled:cursor-not-allowed'
 	);
 
@@ -25,12 +23,14 @@ TextProps) => {
 
 	return (
 		<div className={`mb-1 w-full ${className}`}>
-			<label htmlFor={name.toString()} className='block text-xs text-gray-700'>
+			<label htmlFor={name} className='sr-only'>
 				{label}
 			</label>
 			{type === 'money' ? (
 				<div className='relative rounded-md shadow-sm'>
-					<label className='pointer-events-none absolute inset-y-0 left-1 flex items-center text-gray-500'>$</label>
+					<label className='pointer-events-none absolute inset-y-0 left-1 flex items-center text-gray-500'>
+						$
+					</label>
 					<Field
 						value={values[name]}
 						type='number'
@@ -48,7 +48,7 @@ TextProps) => {
 					name={name}
 					id={name}
 					className={inputClassName}
-					placeholder={placeholder}
+					placeholder={name}
 					disabled={disabled}
 				/>
 			)}

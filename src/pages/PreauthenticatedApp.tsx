@@ -14,14 +14,15 @@ export const PreauthenticatedApp = () => {
 
 	// * Dynamically create accessible routes
 	let basePathComponent: React.ReactNode;
-	if (status === 'loading') basePathComponent = <LoadingScreen message='Loading...' />;
-	else if (status === 'success') basePathComponent = <AuthenticatedApp />;
-	else
-		basePathComponent = (
-			<Routes>
-				<Route path='*' element={<Login />} />
-			</Routes>
-		);
+	// if (status === 'loading') basePathComponent = <LoadingScreen message='Loading...' />;
+	// else if (status === 'success') basePathComponent = <AuthenticatedApp />;
+	// else
+	// 	basePathComponent = (
+	// 		<Routes>
+	// 			<Route path='*' element={<Login />} />
+	// 		</Routes>
+	// 	);
+	basePathComponent = <AuthenticatedApp />;
 
 	return (
 		<Suspense fallback={<LoadingScreen message='Loading...' />}>
