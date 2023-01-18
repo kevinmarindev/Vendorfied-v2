@@ -13,7 +13,7 @@ import VendorfiedCard from 'components/ui/VendorfiedCard';
 export const Vendors = () => {
 	const navigate = useNavigate();
 	return (
-		<div>
+		<div className='p-8'>
 			<div className='flex justify-between pb-4'>
 				<Formik
 					initialValues={{
