@@ -6,11 +6,11 @@ import Navigation from './Navigation';
 export const Private = () => {
 	const [mobileMenu, setMobileMenu] = useState(false);
 	return (
-		<main className='h-screen overflow-scroll w-full bg-zinc-200 relative '>
+		<main className='h-screen overflow-scroll w-full  relative '>
 			{/* Main content */}
 			<Navigation mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
 			{/* Primary column */}
-			<section className='p-8'>
+			<section>
 				<Outlet />
 			</section>
 		</main>

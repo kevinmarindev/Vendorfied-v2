@@ -12,7 +12,7 @@ import VendorfiedCard from 'components/ui/VendorfiedCard';
 
 export const Dashboard = () => {
 	return (
-		<div>
+		<div className='p-4'>
 			<div className='flex space-x-5 items-center pb-4'>
 				<h6 className='text-3xl'>Dashboard</h6>
 				<label>
@@ -21,7 +21,7 @@ export const Dashboard = () => {
 				<label className='text-3xl'>Verc James</label>
 			</div>
 			<div className='flex gap-3'>
-				<div className='hidden md:block  md:w-1/4 h-7'>
+				<div className='hidden md:block  md:w-1/4'>
 					<VendorfiedCard title='Verc James' subTitle='Admin' />
 				</div>
 				<Card className='w-full md:w-3/4'>

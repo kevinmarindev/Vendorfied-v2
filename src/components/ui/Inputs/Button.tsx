@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+
 import clsx from 'clsx';
 
 const baseStyles: any = {
@@ -18,7 +19,7 @@ const variantStyles: any = {
 	},
 	outline: {
 		gray:
-			'border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80 hover:bg-opacity-80 hover:bg-gray-100',
+			'text-gray-700 hover:border-gray-400 bg-white active:bg-gray-100 active:text-gray-700/80 hover:bg-opacity-80 hover:bg-gray-100',
 		red: 'border-red-300 text-red-700 hover:border-red-400 active:bg-red-100 active:text-red-700/80 hover:bg-opacity-80 hover:bg-red-100'
 	}
 };
@@ -39,7 +40,7 @@ export const Button: React.FC<ButtonProps> = ({
 	);
 
 	return href ? (
-		<Link href={href} className={className} {...props} />
+		<Link to={href} className={className} {...props} />
 	) : (
 		<button type={type} className={className} {...props} />
 	);

@@ -13,10 +13,13 @@ import { Avatar } from 'components/ui/Avatar';
 
 export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
 	return (
-		<Disclosure as='nav' className='bg-white/[.50] border-primary border-b-8 shadow sticky top-0 '>
+		<Disclosure
+			as='nav'
+			className='bg-white/[.50] border-primary border-b-8 shadow sticky top-0 z-50 '
+		>
 			{({ open }) => (
 				<>
-					<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+					<div className='px-4'>
 						<div className='flex h-16 justify-between'>
 							<div className='flex'>
 								<div className='flex flex-shrink-0 items-center'>
