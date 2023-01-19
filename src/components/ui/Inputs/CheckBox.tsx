@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+
 import clsx from 'clsx';
 import { useFormikContext } from 'formik';
 
@@ -14,8 +15,7 @@ export const CheckBox: FC<CheckBoxProps> = ({
 CheckBoxProps) => {
 	const { values, errors, touched, handleBlur, setFieldValue } = useFormikContext<any>();
 
-	className = clsx(
-		className,
+	const inputClassName = clsx(
 		'block rounded-md border border-gray-500 focus:border-gray-500 focus:ring-gray-500',
 		'text-sm w-full',
 		'h-4 w-4 text-gray-600 focus:ring-gray-500',
@@ -25,13 +25,13 @@ CheckBoxProps) => {
 	const error = !!touched[name] || forcedTouched ? (errors[name] as string) : '';
 
 	return (
-		<div className='relative flex items-center'>
+		<div className={`relative flex items-center ${className}`}>
 			<div className='flex h-5 items-center'>
 				<input
 					defaultChecked={values[name]}
 					name={name}
 					id={name}
-					className={className}
+					className={inputClassName}
 					onBlur={handleBlur}
 					onChange={() => setFieldValue(name, !values[name])}
 					placeholder={placeholder}
@@ -40,7 +40,7 @@ CheckBoxProps) => {
 					type='checkbox'
 				/>
 			</div>
-			<div className='ml-1 min-w-0 flex-1 text-sm'>
+			<div className='ml-1 min-w-0 flex-1'>
 				<label htmlFor='comments' className='font-medium text-gray-700'>
 					{label}
 				</label>

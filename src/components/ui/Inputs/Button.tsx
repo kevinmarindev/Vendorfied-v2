@@ -11,16 +11,14 @@ const baseStyles: any = {
 
 const variantStyles: any = {
 	solid: {
-		cyan:
-			'relative overflow-hidden bg-cyan-500 text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors',
-		white: 'bg-white text-cyan-900 hover:bg-white/90 active:bg-white/90 active:text-cyan-900/70',
-		gray: 'bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80 ',
-		red: 'bg-red-500 text-white hover:bg-red-600 active:bg-red-500 active:text-white/80'
+		gray: 'bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80',
+		brand: 'text-white hover:shadow bg-gradient-to-r from-blue-500 to-emerald-400 hover:bg-opacity-80'
 	},
 	outline: {
 		gray:
 			'text-gray-700 hover:border-gray-400 bg-white active:bg-gray-100 active:text-gray-700/80 hover:bg-opacity-80 hover:bg-gray-100',
-		red: 'border-red-300 text-red-700 hover:border-red-400 active:bg-red-100 active:text-red-700/80 hover:bg-opacity-80 hover:bg-red-100'
+		brand:
+			'text-cyan-700 border-2 border-t-cyan-600 border-l-blue-500 border-b-cyan-700 border-r-emerald-400'
 	}
 };
 
@@ -50,7 +48,7 @@ export interface ButtonProps {
 	disabled?: boolean;
 	variant?: 'outline' | 'solid';
 	type?: 'submit' | 'button' | 'reset';
-	color?: string;
+	color?: 'brand' | 'gray';
 	className?: string;
 	href?: string;
 	children: React.ReactNode;

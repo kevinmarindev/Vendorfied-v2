@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Sora');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One');
 @import url('https://fonts.cdnfonts.com/css/sf-ui-display');
-@import url('https://fonts.googleapis.com/css2?family=Sora&family=Squada+One');
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +16,7 @@ h6 {
 	font-family: 'SF UI Display';
 	font-weight: 700;
 }
+
 a,
 label {
 	font-family: 'Smooch Sans';

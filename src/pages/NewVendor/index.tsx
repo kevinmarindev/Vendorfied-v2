@@ -2,6 +2,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { Formik } from 'formik';
 
+import { FileUpload } from 'components/ui/FileUpload';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
@@ -48,6 +49,7 @@ export const NewVendor = () => {
 											}
 										]}
 									/>
+									<FileUpload />
 								</form>
 							)}
 						</Formik>

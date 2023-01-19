@@ -19,8 +19,10 @@ module.exports = {
 				primary: '#0071B8'
 			},
 			fontFamily: {
-				smooch: 'Smooch Sans'
-				// sf: 'SF UI Display'
+				squada: 'Squada One',
+				smooch: 'Smooch Sans',
+				sf: 'SF UI Display',
+				sora: 'Sora'
 			}
 		}
 	}

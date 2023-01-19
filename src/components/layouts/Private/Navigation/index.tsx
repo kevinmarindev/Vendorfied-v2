@@ -1,7 +1,9 @@
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { logout as logoutApi } from 'api/user';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -11,15 +13,30 @@ import Logo from 'assets/img/vendorfied-1.png';
 
 import { Avatar } from 'components/ui/Avatar';
 
-export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
+export const Navigation = () => {
+	const queryClient = useQueryClient();
+
+	const { mutateAsync: logout } = useMutation({
+		mutationFn: logoutApi,
+		onSuccess: () => {
+			console.log('Logged out!');
+			// Invalidate and refetch
+			queryClient.invalidateQueries({ queryKey: ['users'] });
+		},
+		onError: (error) => {
+			console.log(error);
+			queryClient.setQueryData(['user'], null);
+		}
+	});
+
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-white/[.50] border-primary border-b-8 shadow sticky top-0 z-50 '
+			className='bg-white/[.50] border-primary border-b-8 shadow-xl sticky top-0 z-50 '
 		>
 			{({ open }) => (
 				<>
-					<div className='px-4'>
+					<div className='mx-4'>
 						<div className='flex h-16 justify-between'>
 							<div className='flex'>
 								<div className='flex flex-shrink-0 items-center'>
@@ -68,32 +85,30 @@ export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
 										<Menu.Items className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
 											<Menu.Item>
 												{({ active }) => (
-													<a
-														href='#'
+													<div
 														className={clsx(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
 													>
 														Your Profile
-													</a>
+													</div>
 												)}
 											</Menu.Item>
 											<Menu.Item>
 												{({ active }) => (
-													<a
-														href='#'
+													<div
 														className={clsx(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
 													>
 														Settings
-													</a>
+													</div>
 												)}
 											</Menu.Item>
 											<Menu.Item>
 												{({ active }) => (
-													<a
-														href='#'
+													<div
+														onClick={() => logout()}
 														className={clsx(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
 													>
 														Sign out
-													</a>
+													</div>
 												)}
 											</Menu.Item>
 										</Menu.Items>
@@ -114,29 +129,25 @@ export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
 						<div className='space-y-1 pt-2 pb-3'>
 							{/* Current: "bg-gray-50 border-gray-500 text-gray-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
 							<Disclosure.Button
-								as='a'
-								href='#'
+								as='div'
 								className='block border-l-4 border-gray-500 bg-gray-50 py-2 pl-3 pr-4 text-base font-medium text-gray-700'
 							>
 								Dashboard
 							</Disclosure.Button>
 							<Disclosure.Button
-								as='a'
-								href='#'
+								as='div'
 								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
 							>
 								Team
 							</Disclosure.Button>
 							<Disclosure.Button
-								as='a'
-								href='#'
+								as='div'
 								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
 							>
 								Projects
 							</Disclosure.Button>
 							<Disclosure.Button
-								as='a'
-								href='#'
+								as='div'
 								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
 							>
 								Calendar
@@ -145,22 +156,20 @@ export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
 						<div className='border-t border-gray-200 pt-4 pb-3'>
 							<div className='mt-3 space-y-1'>
 								<Disclosure.Button
-									as='a'
-									href='#'
+									as='div'
 									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
 								>
 									Your Profile
 								</Disclosure.Button>
 								<Disclosure.Button
-									as='a'
-									href='#'
+									as='div'
 									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
 								>
 									Settings
 								</Disclosure.Button>
 								<Disclosure.Button
-									as='a'
-									href='#'
+									as='div'
+									onClick={() => logout()}
 									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
 								>
 									Sign out
@@ -173,10 +182,5 @@ export const Navigation = ({ mobileMenu, setMobileMenu }: NavigationProps) => {
 		</Disclosure>
 	);
 };
-
-export interface NavigationProps {
-	mobileMenu: boolean;
-	setMobileMenu: (value: boolean) => void;
-}
 
 export default Navigation;
