@@ -22,7 +22,7 @@ export const Select = ({
 	const error = !!touched[name] || forcedTouched ? (errors[name] as string) : '';
 
 	return (
-		<div className={`mb-1 w-full ${className}`}>
+		<div className={`w-full ${className}`}>
 			<label htmlFor={name} className='sr-only'>
 				{label}
 			</label>
@@ -35,13 +35,14 @@ export const Select = ({
 				placeholder={name}
 				disabled={disabled}
 			>
-				<option value=''>{placeholder}</option>
+				<option value=''>{placeholder ?? label}</option>
 				{options.map((option) => (
 					<option key={option.value} value={option.value}>
 						{option.label}
 					</option>
 				))}
 			</Field>
+			<label className='block text-xs font-bold text-red-700'>{error}</label>
 		</div>
 	);
 };

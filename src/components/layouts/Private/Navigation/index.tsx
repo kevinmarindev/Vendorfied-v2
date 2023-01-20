@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import clsx from 'clsx';
 
@@ -14,6 +14,8 @@ import Logo from 'assets/img/vendorfied-1.png';
 import { Avatar } from 'components/ui/Avatar';
 
 export const Navigation = () => {
+	const location = useLocation();
+	const navigate = useNavigate();
 	const queryClient = useQueryClient();
 
 	const { mutateAsync: logout } = useMutation({
@@ -28,6 +30,12 @@ export const Navigation = () => {
 			queryClient.setQueryData(['user'], null);
 		}
 	});
+
+	const varients = {
+		current: 'inline-flex items-center border-b-2 px-1 pt-1 font-medium text-gray-900',
+		notCurrent:
+			'inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
+	};
 
 	return (
 		<Disclosure
@@ -46,21 +54,20 @@ export const Navigation = () => {
 							</div>
 							<div className='hidden sm:ml-6 sm:flex sm:items-center '>
 								<div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
-									<Link
-										to='/dashboard'
-										className='inline-flex items-center border-b-2 px-1 pt-1 font-medium text-gray-900'
-									>
+									<Link to='/' className={varients[location.pathname === '/' ? 'current' : 'notCurrent']}>
 										Dashboard
 									</Link>
 									<Link
 										to='/documents'
-										className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
+										className={
+											varients[location.pathname.startsWith('/documents') ? 'current' : 'notCurrent']
+										}
 									>
 										Documents
 									</Link>
 									<Link
 										to='/vendors'
-										className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
+										className={varients[location.pathname.startsWith('/vendors') ? 'current' : 'notCurrent']}
 									>
 										Vendors
 									</Link>
@@ -130,27 +137,24 @@ export const Navigation = () => {
 							{/* Current: "bg-gray-50 border-gray-500 text-gray-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
 							<Disclosure.Button
 								as='div'
+								onClick={() => navigate('/')}
 								className='block border-l-4 border-gray-500 bg-gray-50 py-2 pl-3 pr-4 text-base font-medium text-gray-700'
 							>
 								Dashboard
 							</Disclosure.Button>
 							<Disclosure.Button
 								as='div'
+								onClick={() => navigate('/documents')}
 								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
 							>
-								Team
+								Documents
 							</Disclosure.Button>
 							<Disclosure.Button
 								as='div'
+								onClick={() => navigate('/vendors')}
 								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
 							>
-								Projects
-							</Disclosure.Button>
-							<Disclosure.Button
-								as='div'
-								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
-							>
-								Calendar
+								Vendors
 							</Disclosure.Button>
 						</div>
 						<div className='border-t border-gray-200 pt-4 pb-3'>

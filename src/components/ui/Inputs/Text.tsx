@@ -22,7 +22,7 @@ export const Text = ({
 	const error = !!touched[name] || forcedTouched ? (errors[name] as string) : '';
 
 	return (
-		<div className={`mb-1 w-full ${className}`}>
+		<div className={`w-full ${className}`}>
 			<label htmlFor={name} className='sr-only'>
 				{label}
 			</label>
