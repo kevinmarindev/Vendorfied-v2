@@ -3,7 +3,6 @@ import { fetchUser } from 'api/user';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
 
 import { Formik } from 'formik';
 
@@ -23,7 +22,7 @@ export const Dashboard = () => {
 
 	return (
 		<div className='p-4'>
-			<div className='flex space-x-5 items-center pb-4'>
+			<div className='flex items-center space-x-5 pb-4'>
 				<h6 className='text-3xl'>Dashboard</h6>
 				<label>
 					<FontAwesomeIcon icon={faChevronRight} />
@@ -35,16 +34,16 @@ export const Dashboard = () => {
 					<VendorfiedCard title='Verc James' subTitle='Admin' />
 				</div>
 				<Card className='w-full md:w-3/4'>
-					<div className='flex-row space-y-2 lg:flex justify-between '>
+					<div className='flex-row justify-between space-y-2 lg:flex '>
 						<div className='flex space-x-4'>
-							<div className='inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900 cursor-pointer'>
+							<div className='inline-flex cursor-pointer items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900'>
 								Notifications
 							</div>
-							<div className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 cursor-pointer'>
+							<div className='inline-flex cursor-pointer items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'>
 								Awaiting Responses
 							</div>
 						</div>
-						<div className='w-full lg:w-fit flex justify-end'>
+						<div className='flex w-full justify-end lg:w-fit'>
 							<Formik
 								initialValues={{
 									search: '',
@@ -60,7 +59,7 @@ export const Dashboard = () => {
 										onChange={(e) => {
 											console.log(e);
 										}}
-										className='flex space-x-2 w-full'
+										className='flex w-full space-x-2'
 									>
 										<Text name='search' label='Search' className='w-1/2 lg:w-56 ' />
 										<Select

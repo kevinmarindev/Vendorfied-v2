@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 import Navigation from './Navigation';
 
 export const Private = () => (
-	<main className='h-screen overflow-scroll w-full  relative '>
+	<main className='relative h-screen w-full  overflow-scroll '>
 		<Navigation />
-		<section className='max-w-8xl mx-auto'>
+		<section className='mx-auto max-w-8xl'>
 			<Outlet />
 		</section>
 	</main>

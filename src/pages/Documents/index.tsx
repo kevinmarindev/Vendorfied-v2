@@ -19,7 +19,7 @@ export const Documents = () => {
 			<h6 className='text-xl'>Document Management</h6>
 			<div className='flex gap-3'>
 				<Card className='w-full'>
-					<div className='flex-row space-y-4 md:flex justify-between w-full pb-4'>
+					<div className='w-full flex-row justify-between space-y-4 pb-4 md:flex'>
 						<Tabs
 							className='md:w-1/3'
 							tabs={[
@@ -35,7 +35,7 @@ export const Documents = () => {
 								}
 							]}
 						/>
-						<div className='md:w-2/3 lg:w-fit block md:flex justify-end md:space-x-2 space-x-0 space-y-2 md:space-y-0'>
+						<div className='block justify-end space-x-0 space-y-2 md:flex md:w-2/3 md:space-x-2 md:space-y-0 lg:w-fit'>
 							<Formik
 								initialValues={{
 									search: '',
@@ -52,7 +52,7 @@ export const Documents = () => {
 										onChange={(e) => {
 											console.log(e);
 										}}
-										className='block space-y-2 md:space-y-0 md:flex md:space-x-2 md:w-3/4'
+										className='block space-y-2 md:flex md:w-3/4 md:space-y-0 md:space-x-2'
 									>
 										<Text name='search' label='Search' className='w-full md:w-1/2 lg:w-56 ' />
 										<Select
@@ -93,12 +93,12 @@ export const Documents = () => {
 							</Button>
 						</div>
 					</div>
-					<div className='bg-gray-100 h-24 rounded-md flex items-center justify-center'>
+					<div className='flex h-24 items-center justify-center rounded-md bg-gray-100'>
 						<label className='text-3xl font-bold'>No document to display</label>
 					</div>
 
-					<div className='bg-gray-100 rounded-md grid grid-cols-1 md:grid-cols-6 mt-4 px-4 py-8'>
-						<div className='col-span-1 md:col-span-4 border-0 md:border-b'>
+					<div className='mt-4 grid grid-cols-1 rounded-md bg-gray-100 px-4 py-8 md:grid-cols-6'>
+						<div className='col-span-1 border-0 md:col-span-4 md:border-b'>
 							<h2 className='text-2xl font-bold'>Document 1</h2>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed just o, sed fermentum
@@ -106,11 +106,11 @@ export const Documents = () => {
 							</p>
 							<label className='text-md font-extrabold text-black'>Contact - 13MBs - Nov 2, 2023</label>
 						</div>
-						<div className='col-span-1 md:col-span-2 flex justify-center items-center space-x-4 border-b pb-4 md:pb-0'>
-							<FontAwesomeIcon icon={faPencilAlt} className='text-primary text-xl' />
-							<FontAwesomeIcon icon={faDownload} className='text-primary text-xl' />
+						<div className='col-span-1 flex items-center justify-center space-x-4 border-b pb-4 md:col-span-2 md:pb-0'>
+							<FontAwesomeIcon icon={faPencilAlt} className='text-xl text-primary' />
+							<FontAwesomeIcon icon={faDownload} className='text-xl text-primary' />
 						</div>
-						<div className='grid grid-cols-3 gap-4 md:grid-cols-6 w-full md:col-span-6 lg:grid-cols-10'>
+						<div className='grid w-full grid-cols-3 gap-4 md:col-span-6 md:grid-cols-6 lg:grid-cols-10'>
 							<Button>Group1</Button>
 							<Button>Group2</Button>
 							<Button>Group3</Button>

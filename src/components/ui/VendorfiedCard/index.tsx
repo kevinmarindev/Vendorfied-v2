@@ -27,41 +27,41 @@ export const VendorfiedCard = ({
 	contactEmail = 'support#vendrotfied.com'
 }: VendorfiedCardProps) => (
 	<Card className='flex-row space-y-2'>
-		<div className='relative items-center pb-4 h-36  justify-center flex'>
+		<div className='relative flex h-36 items-center  justify-center pb-4'>
 			<div className='absolute top-0 right-0'>
 				<FontAwesomeIcon icon={icon} className='text-xl text-primary' />
 			</div>
 			{src ? (
-				<Avatar size='lg' className='z-10 absolute top-0 ' src={src} />
+				<Avatar size='lg' className='absolute top-0 z-10 ' src={src} />
 			) : (
-				<div className='absolute top-0 flex justify-center z-10 bg-white w-1/2 border p-1 border-primary rounded-lg'>
+				<div className='absolute top-0 z-10 flex w-1/2 justify-center rounded-lg border border-primary bg-white p-1'>
 					<img className='w-24' src={Logo} />
 				</div>
 			)}
-			<div className='absolute bottom-0 w-full bg-gray-100 h-24 right-0 text-center pt-12'>
+			<div className='absolute bottom-0 right-0 h-24 w-full bg-gray-100 pt-12 text-center'>
 				<h2>{title}</h2>
 				<label>{subTitle}</label>
 			</div>
 		</div>
-		<div className='w-full bg-gray-100 p-3 rounded-xl overflow-scroll'>
+		<div className='w-full overflow-scroll rounded-xl bg-gray-100 p-3'>
 			<h2 className='mb-2'>Company Info</h2>
 			<div className='grid grid-cols-[25px_1fr] gap-x-2 gap-y-2'>
-				<FontAwesomeIcon icon={faPhoneAlt} className='text-primary self-center mx-auto' />
+				<FontAwesomeIcon icon={faPhoneAlt} className='mx-auto self-center text-primary' />
 				<span className='break-words text-sm font-thin'>{companyPhoneNumber}</span>
-				<FontAwesomeIcon icon={faEnvelope} className='text-primary  self-center mx-auto' />
+				<FontAwesomeIcon icon={faEnvelope} className='mx-auto  self-center text-primary' />
 				<span className='break-words text-sm'>{companyEmail}</span>
-				<FontAwesomeIcon icon={faLaptop} className='text-primary  self-center mx-auto' />
+				<FontAwesomeIcon icon={faLaptop} className='mx-auto  self-center text-primary' />
 				<span className='break-words text-sm'>{companyWebsite}</span>
-				<FontAwesomeIcon icon={faLocationPin} className='text-primary  self-center mx-auto' />
+				<FontAwesomeIcon icon={faLocationPin} className='mx-auto  self-center text-primary' />
 				<span className='break-words text-sm'>{companyAddress}</span>
 			</div>
 		</div>
-		<div className='w-full bg-gray-100 p-3 rounded-xl overflow-scroll'>
+		<div className='w-full overflow-scroll rounded-xl bg-gray-100 p-3'>
 			<h2 className='mb-2'>Contact Info</h2>
 			<div className='grid grid-cols-[25px_1fr] gap-x-2 gap-y-2'>
-				<FontAwesomeIcon icon={faPhoneAlt} className='text-primary self-center mx-auto' />
+				<FontAwesomeIcon icon={faPhoneAlt} className='mx-auto self-center text-primary' />
 				<span className='break-words text-sm'>{contactPhoneNumber}</span>
-				<FontAwesomeIcon icon={faEnvelope} className='text-primary  self-center mx-auto' />
+				<FontAwesomeIcon icon={faEnvelope} className='mx-auto  self-center text-primary' />
 				<span className='break-words text-sm'>{contactEmail}</span>
 			</div>
 		</div>

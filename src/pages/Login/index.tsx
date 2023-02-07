@@ -19,7 +19,7 @@ export const Login = () => {
 
 	const { mutate: login } = useMutation(['login'], {
 		onMutate: async (values: any) => {
-			return await loginApi(values.email, values.password);
+			return await loginApi({ email: values.email, password: values.password });
 		},
 		onError: (error) => {
 			// ! for now keep this, until we have a functioning backend
@@ -32,10 +32,10 @@ export const Login = () => {
 	});
 
 	return (
-		<div className='w-full h-screen flex flex-col justify-center items-center p-16'>
+		<div className='flex h-screen w-full flex-col items-center justify-center p-16'>
 			<img src={Logo} className='w-24 object-cover pb-4' />
-			<h1 className='text-5xl font-bold text-gray-900 font-squada'>Welcome Back</h1>
-			<h1 className='text-xl font-bold text-gray-500/[.8] font-squada'>
+			<h1 className='font-squada text-5xl font-bold text-gray-900'>Welcome Back</h1>
+			<h1 className='font-squada text-xl font-bold text-gray-500/[.8]'>
 				Please enter your login details
 			</h1>
 			<Formik
@@ -61,7 +61,7 @@ export const Login = () => {
 							<Text name='password' label='Password' type='password' />
 							<div className='flex justify-between'>
 								<CheckBox name='remember' label='Remember me' className='text-lg' />
-								<Link to='/forgot-password' className='text-gray-500 hover:text-gray-700 font-squada'>
+								<Link to='/forgot-password' className='font-squada text-gray-500 hover:text-gray-700'>
 									Forgot Password?
 								</Link>
 							</div>

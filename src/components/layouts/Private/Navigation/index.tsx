@@ -40,7 +40,7 @@ export const Navigation = () => {
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-white/[.50] border-primary border-b-8 shadow-xl sticky top-0 z-50 '
+			className='sticky top-0 z-50 border-b-8 border-primary bg-white/[.50] shadow-xl '
 		>
 			{({ open }) => (
 				<>

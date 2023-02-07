@@ -28,7 +28,7 @@ export const FileUpload = () => {
 	};
 
 	return (
-		<div className='relative w-full hover:cursor-crosshair border-dotted border-2'>
+		<div className='relative w-full border-2 border-dotted hover:cursor-crosshair'>
 			<input ref={inputRef} type='file' className='hidden' multiple={true} onChange={handleChange} />
 
 			<label id='label-file-upload' htmlFor='input-file-upload' className=''>
@@ -40,7 +40,7 @@ export const FileUpload = () => {
 			{dragActive && (
 				<div
 					// id='drag-file-element'
-					className='absolute w-full h-full bg-gray-200'
+					className='absolute h-full w-full bg-gray-200'
 					onDragEnter={handleDrag}
 					onDragLeave={handleDrag}
 					onDragOver={handleDrag}
