@@ -27,3 +27,4 @@ export interface AvatarProps {
 	src?: string;
 	className?: string;
 }
+export default Avatar;

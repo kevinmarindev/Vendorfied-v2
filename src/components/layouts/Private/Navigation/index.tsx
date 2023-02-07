@@ -11,7 +11,7 @@ import clsx from 'clsx';
 
 import Logo from 'assets/img/vendorfied-1.png';
 
-import { Avatar } from 'components/ui/Avatar';
+import Avatar from 'components/ui/Avatar';
 
 export const Navigation = () => {
 	const location = useLocation();

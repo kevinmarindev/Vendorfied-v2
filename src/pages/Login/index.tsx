@@ -30,6 +30,7 @@ export const Login = () => {
 			} as User);
 		}
 	});
+
 	return (
 		<div className='w-full h-screen flex flex-col justify-center items-center p-16'>
 			<img src={Logo} className='w-24 object-cover pb-4' />

@@ -23,6 +23,9 @@ module.exports = {
 				smooch: 'Smooch Sans',
 				sf: 'SF UI Display',
 				sora: 'Sora'
+			},
+			maxWidth: {
+				'8xl': '100rem'
 			}
 		}
 	}

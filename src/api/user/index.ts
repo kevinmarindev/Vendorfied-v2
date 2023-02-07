@@ -1,6 +1,4 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { User } from "models/User";
-
 
 export const fetchUser = async () => {
     const res = await fetch('http://localhost:3000/api/user');

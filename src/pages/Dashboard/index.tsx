@@ -1,6 +1,8 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { fetchUser } from 'api/user';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 
 import { Formik } from 'formik';
@@ -11,6 +13,14 @@ import Text from 'components/ui/Inputs/Text';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
 
 export const Dashboard = () => {
+	const { data: user } = useQuery({
+		queryKey: ['user'],
+		queryFn: fetchUser,
+		onSettled(data, error) {
+			console.log(data, error);
+		}
+	});
+
 	return (
 		<div className='p-4'>
 			<div className='flex space-x-5 items-center pb-4'>
