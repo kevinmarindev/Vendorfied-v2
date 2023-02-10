@@ -48,7 +48,7 @@ export const Text = ({
 					name={name}
 					id={name}
 					className={inputClassName}
-					placeholder={name}
+					placeholder={label}
 					disabled={disabled}
 				/>
 			)}
@@ -65,19 +65,19 @@ export interface TextProps {
 	disabled?: boolean;
 	forcedTouched?: boolean;
 	type?:
-		| 'money'
-		| 'number'
-		| 'text'
-		| 'password'
-		| 'email'
-		| 'tel'
-		| 'url'
-		| 'search'
-		| 'date'
-		| 'time'
-		| 'datetime-local'
-		| 'month'
-		| 'week';
+	| 'money'
+	| 'number'
+	| 'text'
+	| 'password'
+	| 'email'
+	| 'tel'
+	| 'url'
+	| 'search'
+	| 'date'
+	| 'time'
+	| 'datetime-local'
+	| 'month'
+	| 'week';
 	className?: string;
 }
 

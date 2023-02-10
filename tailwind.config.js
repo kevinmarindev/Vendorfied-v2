@@ -16,7 +16,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#0071B8'
+				primary: '#0071B8',
+				secondary: '#808080'
 			},
 			fontFamily: {
 				squada: 'Squada One',

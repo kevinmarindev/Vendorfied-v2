@@ -19,6 +19,7 @@ export const VendorfiedCard = ({
 	subTitle = 'Admin',
 	icon = faPencil,
 	src,
+	logo,
 	companyPhoneNumber = '123-456-7890',
 	companyEmail = 'support@vendorfied.com',
 	companyWebsite = 'https://vendorfied.com',
@@ -26,17 +27,17 @@ export const VendorfiedCard = ({
 	contactPhoneNumber = '123-456-7890',
 	contactEmail = 'support#vendrotfied.com'
 }: VendorfiedCardProps) => (
-	<Card className='flex-row space-y-2'>
-		<div className='relative flex h-36 items-center  justify-center pb-4'>
+	<Card className='flex-row space-y-2 max-w-xs max-h-[30rem]'>
+		<div className='relative flex h-36 items-center justify-center pb-4'>
 			<div className='absolute top-0 right-0'>
 				<FontAwesomeIcon icon={icon} className='text-xl text-primary' />
 			</div>
-			{src ? (
-				<Avatar size='lg' className='absolute top-0 z-10 ' src={src} />
-			) : (
+			{logo ? (
 				<div className='absolute top-0 z-10 flex w-1/2 justify-center rounded-lg border border-primary bg-white p-1'>
 					<img className='w-24' src={Logo} />
 				</div>
+			) : (
+				<Avatar size='lg' className='absolute top-0 z-10 ' src={src} />
 			)}
 			<div className='absolute bottom-0 right-0 h-24 w-full bg-gray-100 pt-12 text-center'>
 				<h2>{title}</h2>
@@ -73,6 +74,7 @@ interface VendorfiedCardProps {
 	subTitle?: string;
 	icon?: IconProp;
 	src?: string;
+	logo: boolean
 	companyPhoneNumber?: string;
 	companyEmail?: string;
 	companyWebsite?: string;
