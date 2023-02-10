@@ -17,7 +17,9 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: '#0071B8',
-				secondary: '#808080'
+				secondary: '#808080',
+				brandBlue: "#0075B6",
+				brandGreen: "#00AA7B",
 			},
 			fontFamily: {
 				squada: 'Squada One',

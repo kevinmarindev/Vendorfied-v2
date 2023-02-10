@@ -12,13 +12,13 @@ const baseStyles: any = {
 const variantStyles: any = {
 	solid: {
 		gray: 'bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80',
-		brand: 'text-white hover:shadow bg-gradient-to-r from-blue-500 to-emerald-400 hover:bg-opacity-80'
+		brand: 'text-white hover:shadow bg-gradient-to-r from-brandBlue to-brandGreen hover:bg-opacity-80'
 	},
 	outline: {
 		gray:
 			'text-gray-700 hover:border-gray-400 bg-white active:bg-gray-100 active:text-gray-700/80 hover:bg-opacity-80 hover:bg-gray-100',
 		brand:
-			'text-cyan-700 border-2 border-t-cyan-600 border-l-blue-500 border-b-cyan-700 border-r-emerald-400'
+			'text-cyan-700 border-2 border-t-cyan-600 border-l-blue-500 border-b-brandBlue border-r-brandGreen'
 	}
 };
 

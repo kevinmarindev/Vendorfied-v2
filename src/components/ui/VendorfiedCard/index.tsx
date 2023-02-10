@@ -4,6 +4,7 @@ import {
 	faLaptop,
 	faLocationPin,
 	faPencil,
+	faPerson,
 	faPhoneAlt
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +16,7 @@ import { Avatar } from '../Avatar';
 import Card from '../Card';
 
 export const VendorfiedCard = ({
-	title = 'Verc James',
+	title = 'Company Name',
 	subTitle = 'Admin',
 	icon = faPencil,
 	src,
@@ -24,10 +25,11 @@ export const VendorfiedCard = ({
 	companyEmail = 'support@vendorfied.com',
 	companyWebsite = 'https://vendorfied.com',
 	companyAddress = '1234 Vendorfied Way, Vendorfied, CA 12345',
+	contactName = 'John Smith',
 	contactPhoneNumber = '123-456-7890',
 	contactEmail = 'support#vendrotfied.com'
 }: VendorfiedCardProps) => (
-	<Card className='flex-row space-y-2 max-w-xs max-h-[30rem]'>
+	<Card className=' max-h-[30rem] flex-row space-y-2'>
 		<div className='relative flex h-36 items-center justify-center pb-4'>
 			<div className='absolute top-0 right-0'>
 				<FontAwesomeIcon icon={icon} className='text-xl text-primary' />
@@ -60,6 +62,8 @@ export const VendorfiedCard = ({
 		<div className='w-full overflow-scroll rounded-xl bg-gray-100 p-3'>
 			<h2 className='mb-2'>Contact Info</h2>
 			<div className='grid grid-cols-[25px_1fr] gap-x-2 gap-y-2'>
+				<FontAwesomeIcon icon={faPerson} className='mx-auto  self-center text-primary' />
+				<span className='break-words text-sm'>{contactName}</span>
 				<FontAwesomeIcon icon={faPhoneAlt} className='mx-auto self-center text-primary' />
 				<span className='break-words text-sm'>{contactPhoneNumber}</span>
 				<FontAwesomeIcon icon={faEnvelope} className='mx-auto  self-center text-primary' />
@@ -74,12 +78,13 @@ interface VendorfiedCardProps {
 	subTitle?: string;
 	icon?: IconProp;
 	src?: string;
-	logo: boolean
+	logo: boolean;
 	companyPhoneNumber?: string;
 	companyEmail?: string;
 	companyWebsite?: string;
 	companyAddress?: string;
 
+	contactName?: string;
 	contactPhoneNumber?: string;
 	contactEmail?: string;
 }

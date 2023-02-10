@@ -10,7 +10,7 @@ export const Text = ({
 	disabled,
 	forcedTouched
 }: TextProps) => {
-	const { values, errors, touched } = useFormikContext<any>();
+	const { values, errors, touched, setFieldValue } = useFormikContext<any>();
 
 	const inputClassName = clsx(
 		'focus:border-gray-500 focus:ring-gray-500',
@@ -41,6 +41,19 @@ export const Text = ({
 						disabled={disabled}
 					/>
 				</div>
+			) : type === 'textarea' ? (
+				<textarea
+					value={values[name]}
+					name={name}
+					id={name}
+					className={inputClassName}
+					placeholder={label}
+					disabled={disabled}
+					rows={3}
+					onChange={(e) => {
+						setFieldValue(name, e.target.value);
+					}}
+				/>
 			) : (
 				<Field
 					value={values[name]}
@@ -65,19 +78,20 @@ export interface TextProps {
 	disabled?: boolean;
 	forcedTouched?: boolean;
 	type?:
-	| 'money'
-	| 'number'
-	| 'text'
-	| 'password'
-	| 'email'
-	| 'tel'
-	| 'url'
-	| 'search'
-	| 'date'
-	| 'time'
-	| 'datetime-local'
-	| 'month'
-	| 'week';
+		| 'textarea'
+		| 'money'
+		| 'number'
+		| 'text'
+		| 'password'
+		| 'email'
+		| 'tel'
+		| 'url'
+		| 'search'
+		| 'date'
+		| 'time'
+		| 'datetime-local'
+		| 'month'
+		| 'week';
 	className?: string;
 }
 
