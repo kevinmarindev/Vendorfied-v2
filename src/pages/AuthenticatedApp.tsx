@@ -5,10 +5,9 @@ import Private from 'components/layouts/Private';
 import Dashboard from './Dashboard';
 import Documents from './Documents';
 import Groups from './Documents/Groups';
+import NewAccount from './NewAccount';
 import NewVendor from './NewVendor';
 import Vendors from './Vendors';
-import NewAccount from './NewAccount';
-import ProfileInfo from './NewAccount/ProfileInfo';
 
 export const AuthenticatedApp = () => {
 	return (
@@ -20,7 +19,6 @@ export const AuthenticatedApp = () => {
 				<Route path='/vendors' element={<Vendors />} />
 				<Route path='/newVendor' element={<NewVendor />} />
 				<Route path='/newAccount' element={<NewAccount />} />
-				<Route path='/profileInfo' element={<ProfileInfo />} />
 				<Route path='*' element={<div>Warning</div>} />
 			</Route>
 		</Routes>

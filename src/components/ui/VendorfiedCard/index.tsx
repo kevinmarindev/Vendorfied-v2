@@ -29,7 +29,7 @@ export const VendorfiedCard = ({
 	contactPhoneNumber = '123-456-7890',
 	contactEmail = 'support#vendrotfied.com'
 }: VendorfiedCardProps) => (
-	<Card className=' max-h-[30rem] flex-row space-y-2'>
+	<Card className=' max-h-[30rem] flex-row space-y-2 text-left'>
 		<div className='relative flex h-36 items-center justify-center pb-4'>
 			<div className='absolute top-0 right-0'>
 				<FontAwesomeIcon icon={icon} className='text-xl text-primary' />
@@ -75,6 +75,7 @@ export const VendorfiedCard = ({
 
 interface VendorfiedCardProps {
 	title?: string;
+	name?: string;
 	subTitle?: string;
 	icon?: IconProp;
 	src?: string;
@@ -83,10 +84,16 @@ interface VendorfiedCardProps {
 	companyEmail?: string;
 	companyWebsite?: string;
 	companyAddress?: string;
+	companyName?: string;
 
 	contactName?: string;
 	contactPhoneNumber?: string;
 	contactEmail?: string;
+
+	firstName?: string;
+	lastName?: string;
+	phoneNumber?: number;
+	emailAddress?: string;
 }
 
 export default VendorfiedCard;

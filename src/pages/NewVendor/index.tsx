@@ -74,7 +74,10 @@ export const NewVendor = () => {
 							/>
 						</div>
 						<div className='relative flex w-full justify-center md:w-3/4'>
-							<div className='absolute left-0 cursor-pointer font-squada text-secondary' onClick={back}>
+							<div
+								className='absolute left-0 mt-10 cursor-pointer font-squada text-secondary'
+								onClick={back}
+							>
 								{'<'} Back
 							</div>
 							<div className='w-1/2 flex-col'>
