@@ -93,10 +93,10 @@ export const ProfileInfo = () => {
 			</div>
 
 			<div className='w-full flex-col space-y-2'>
-				<Text name='first-name' label='First name' />
-				<Text name='last-name' label='Last name' />
-				<Text name='phone-number' label='Phone number' />
-				<Text name='email' label='Email address' />
+				<Text name='primaryName' label='First name' />
+				<Text name='primaryLastName' label='Last name' />
+				<Text name='primaryPhoneNumber' label='Phone number' />
+				<Text name='primaryEmail' label='Email address' />
 			</div>
 		</>
 	);

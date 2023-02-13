@@ -78,8 +78,8 @@ export const NewAccount = () => {
 									companyWebsite={values.website || undefined}
 									companyPhoneNumber={values.companyPhoneNumber || undefined}
 									contactName={values.primaryName || undefined}
-									contactEmail={values.primaryEmail}
-									contactPhoneNumber={values.primaryPhoneNumber}
+									contactPhoneNumber={values.primaryPhoneNumber || undefined}
+									contactEmail={values.primaryEmail || undefined}
 								/>
 							</div>
 						</div>
