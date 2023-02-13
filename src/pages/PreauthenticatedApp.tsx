@@ -9,6 +9,7 @@ import LoadingScreen from 'components/ui/LoadingScreen';
 
 import AuthenticatedApp from './AuthenticatedApp';
 import Login from './Login';
+import {PreAuthScreenRegister} from './Register';
 
 export const PreauthenticatedApp = () => {
 	const { data: user } = useQuery({
@@ -26,8 +27,9 @@ export const PreauthenticatedApp = () => {
 	else
 		basePathComponent = (
 			<Routes>
-				<Route path='*' element={<Public />}>
-					<Route path='*' element={<Login />} />
+				<Route path='/' element={<Public />}>
+					<Route path='/login' element={<Login />} />
+					<Route path='/register' element={<PreAuthScreenRegister />} />
 				</Route>
 			</Routes>
 		);

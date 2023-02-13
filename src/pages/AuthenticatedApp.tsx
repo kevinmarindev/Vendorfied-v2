@@ -8,6 +8,7 @@ import Groups from './Documents/Groups';
 import NewVendor from './NewVendor';
 import Vendors from './Vendors';
 
+
 export const AuthenticatedApp = () => {
 	return (
 		<Routes>
