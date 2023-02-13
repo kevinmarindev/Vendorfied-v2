@@ -8,8 +8,9 @@ import { Public } from 'components/layouts/Public';
 import LoadingScreen from 'components/ui/LoadingScreen';
 
 import AuthenticatedApp from './AuthenticatedApp';
+import LandingScreen from './LandingScreen';
 import Login from './Login';
-import {PreAuthScreenRegister} from './Register';
+import { PreAuthScreenRegister } from './Register';
 
 export const PreauthenticatedApp = () => {
 	const { data: user } = useQuery({
@@ -28,6 +29,7 @@ export const PreauthenticatedApp = () => {
 		basePathComponent = (
 			<Routes>
 				<Route path='/' element={<Public />}>
+					<Route path='/' element={<LandingScreen />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<PreAuthScreenRegister />} />
 				</Route>
