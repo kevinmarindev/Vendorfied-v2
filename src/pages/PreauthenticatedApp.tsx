@@ -17,7 +17,7 @@ import LoadingScreen from 'components/ui/LoadingScreen';
 import AuthenticatedApp from './AuthenticatedApp';
 import LandingScreen from './LandingScreen';
 import Login from './Login';
-import { PreAuthScreenRegister } from './Register';
+import { Register } from './Register';
 
 export const PreauthenticatedApp = () => {
 	const { data: user } = useQuery({
@@ -38,7 +38,7 @@ export const PreauthenticatedApp = () => {
 				<Route path='/' element={<Public />}>
 					<Route index element={<LandingScreen />} />
 					<Route path='about' element={<div>About</div>} />
-				<Route path='register' element={<PreAuthScreenRegister />} />
+				<Route path='register' element={<Register />} />
 				</Route>
 				<Route path='login' element={<Auth />}>
 					<Route index element={<Login />} />
