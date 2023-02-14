@@ -1,8 +1,4 @@
-import React from 'react';
-
 import Logo from 'assets/img/vendorfied.png';
-
-import Card from 'components/ui/Card';
 
 export const LandingScreen = () => {
 	return (
