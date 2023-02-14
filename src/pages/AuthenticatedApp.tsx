@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Private from 'components/layouts/Private';
 
@@ -9,7 +9,6 @@ import NewVendor from './NewVendor';
 import Vendors from './Vendors';
 import NewAccount from './NewAccount';
 import ProfileInfo from './NewAccount/ProfileInfo';
-
 
 export const AuthenticatedApp = () => {
 	return (
