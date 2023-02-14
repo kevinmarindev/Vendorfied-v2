@@ -1,4 +1,3 @@
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { logout as logoutApi } from 'api/user';
 // Application Screen || Define Imports
 // =================================================================================================
@@ -7,17 +6,18 @@ import { logout as logoutApi } from 'api/user';
 // Application Screen || Define Exports
 // =================================================================================================
 // =================================================================================================
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Fragment } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-import clsx from 'clsx';
 
 import Logo from 'assets/img/vendorfied-1.png';
 
 import Avatar from 'components/ui/Avatar';
+import { Button } from 'components/ui/Inputs/Button';
+import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
+import { Fragment } from 'react';
 
 export const Navigation = () => {
 	const location = useLocation();
@@ -44,10 +44,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<Disclosure
-			as='nav'
-			className='sticky top-0 z-50 border-b-8 border-primary bg-white/[.50] shadow-xl '
-		>
+		<Disclosure as='nav' className=' sticky top-0 z-50 bg-white/[.50] '>
 			{({ open }) => (
 				<>
 					<div className='mx-4'>
@@ -60,7 +57,10 @@ export const Navigation = () => {
 							</div>
 							<div className='hidden sm:ml-6 sm:flex sm:items-center '>
 								<div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
-									<Link to='/' className={variants[location.pathname === '/Home' ? 'current' : 'notCurrent']}>
+									<Link
+										to='/'
+										className={variants[location.pathname === '/Home' ? 'current' : 'notCurrent']}
+									>
 										Home
 									</Link>
 									<Link
@@ -155,56 +155,6 @@ export const Navigation = () => {
 							</div> 
 						</div>
 					</div>
-
-					<Disclosure.Panel className='sm:hidden'>
-						<div className='space-y-1 pt-2 pb-3'>
-							{/* Current: "bg-gray-50 border-gray-500 text-gray-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-							<Disclosure.Button
-								as='div'
-								onClick={() => navigate('/')}
-								className='block border-l-4 border-gray-500 bg-gray-50 py-2 pl-3 pr-4 text-base font-medium text-gray-700'
-							>
-								Dashboard
-							</Disclosure.Button>
-							<Disclosure.Button
-								as='div'
-								onClick={() => navigate('/documents')}
-								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
-							>
-								Documents
-							</Disclosure.Button>
-							<Disclosure.Button
-								as='div'
-								onClick={() => navigate('/vendors')}
-								className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'
-							>
-								Vendors
-							</Disclosure.Button>
-						</div>
-						<div className='border-t border-gray-200 pt-4 pb-3'>
-							<div className='mt-3 space-y-1'>
-								<Disclosure.Button
-									as='div'
-									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
-								>
-									Your Profile
-								</Disclosure.Button>
-								<Disclosure.Button
-									as='div'
-									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
-								>
-									Settings
-								</Disclosure.Button>
-								<Disclosure.Button
-									as='div'
-									onClick={() => logout()}
-									className='block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800'
-								>
-									Sign out
-								</Disclosure.Button>
-							</div>
-						</div>
-					</Disclosure.Panel>
 				</>
 			)}
 		</Disclosure>

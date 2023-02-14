@@ -20,8 +20,11 @@ module.exports = {
 				vendorfiedGreen: '#01A97D',
 				vendorfiedBlue: '#0077B5',
 				blue:'#017DAE',
-				grey: '#868687',
-			  },			  
+				grey: '#868687',			  
+				secondary: '#808080',
+				brandBlue: "#0075B6",
+				brandGreen: "#00AA7B",
+			},
 			fontFamily: {
 				squada: 'Squada One',
 				smooch: 'Smooch Sans',

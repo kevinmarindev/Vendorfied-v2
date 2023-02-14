@@ -10,12 +10,14 @@ import { useQuery } from '@tanstack/react-query';
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { Public } from 'components/layouts/Public';
+import Auth from 'components/layouts/Auth';
+import Public from 'components/layouts/Public';
 import LoadingScreen from 'components/ui/LoadingScreen';
 
 import AuthenticatedApp from './AuthenticatedApp';
+import LandingScreen from './LandingScreen';
 import Login from './Login';
-import {PreAuthScreenRegister} from './Register';
+import { PreAuthScreenRegister } from './Register';
 
 export const PreauthenticatedApp = () => {
 	const { data: user } = useQuery({
@@ -34,8 +36,11 @@ export const PreauthenticatedApp = () => {
 		basePathComponent = (
 			<Routes>
 				<Route path='/' element={<Public />}>
-					<Route path='/login' element={<Login />} />
-					<Route path='/register' element={<PreAuthScreenRegister />} />
+					<Route index element={<LandingScreen />} />
+				<Route path='register' element={<PreAuthScreenRegister />} />
+				</Route>
+				<Route path='login' element={<Auth />}>
+					<Route index element={<Login />} />
 				</Route>
 			</Routes>
 		);

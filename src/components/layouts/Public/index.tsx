@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
 import Navigation from './Navigation';
 // Application Screen || Define Imports
 // =================================================================================================
@@ -20,3 +20,5 @@ export const Public = () => {
 	</main>
 	);
 };
+
+export default Public;

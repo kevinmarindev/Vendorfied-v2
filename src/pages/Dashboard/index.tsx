@@ -21,7 +21,7 @@ export const Dashboard = () => {
 	});
 
 	return (
-		<div className='p-4'>
+		<>
 			<div className='flex items-center space-x-5 pb-4'>
 				<h6 className='text-3xl'>Dashboard</h6>
 				<label>
@@ -31,7 +31,7 @@ export const Dashboard = () => {
 			</div>
 			<div className='flex gap-3'>
 				<div className='hidden md:block  md:w-1/4'>
-					<VendorfiedCard title='Verc James' subTitle='Admin' />
+					<VendorfiedCard logo={false} title='Verc James' subTitle='Admin' />
 				</div>
 				<Card className='w-full md:w-3/4'>
 					<div className='flex-row justify-between space-y-2 lg:flex '>
@@ -80,7 +80,7 @@ export const Dashboard = () => {
 					</div>
 				</Card>
 			</div>
-		</div>
+		</>
 	);
 };
 
