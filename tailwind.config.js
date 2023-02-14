@@ -16,8 +16,12 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#0071B8'
-			},
+				primary: '#0071B8',
+				vendorfiedGreen: '#01A97D',
+				vendorfiedBlue: '#0077B5',
+				blue:'#017DAE',
+				grey: '#868687',
+			  },			  
 			fontFamily: {
 				squada: 'Squada One',
 				smooch: 'Smooch Sans',
@@ -26,7 +30,7 @@ module.exports = {
 			},
 			maxWidth: {
 				'8xl': '100rem'
-			}
+			},
 		}
 	}
 };

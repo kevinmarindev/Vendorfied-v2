@@ -1,6 +1,12 @@
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { logout as logoutApi } from 'api/user';
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
@@ -60,32 +66,32 @@ export const Navigation = () => {
 									<Link
 										to='/about'
 										className={
-											variants[location.pathname.startsWith('/About') ? 'current' : 'notCurrent']
+											variants[location.pathname.startsWith('/about') ? 'current' : 'notCurrent']
 										}
 									>
 										About
 									</Link>
 									<Link
 										to='/pricing'
-										className={variants[location.pathname.startsWith('/Pricing') ? 'current' : 'notCurrent']}
+										className={variants[location.pathname.startsWith('/pricing') ? 'current' : 'notCurrent']}
 									>
 										Pricing
 									</Link>
 									<Link
-										to='/pricing'
-										className={variants[location.pathname.startsWith('/Pricing') ? 'current' : 'notCurrent']}
+										to='/contact'
+										className={variants[location.pathname.startsWith('/contact') ? 'current' : 'notCurrent']}
 									>
 										Contact
 									</Link>
 									<Link
-										to='/pricing'
-										className={variants[location.pathname.startsWith('/Pricing') ? 'current' : 'notCurrent']}
+										to='/register'
+										className={variants[location.pathname.startsWith('/register') ? 'current' : 'notCurrent']}
 									>
 										Sign Up
 									</Link>
 									<Link
-										to='/pricing'
-										className={variants[location.pathname.startsWith('/Pricing') ? 'current' : 'notCurrent']}
+										to='/login'
+										className={variants[location.pathname.startsWith('/login') ? 'current' : 'notCurrent']}
 									>
 										Login
 									</Link>
@@ -146,7 +152,7 @@ export const Navigation = () => {
 									<span className='sr-only'>Open main menu</span>
 									{open ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
 								</Disclosure.Button>
-							</div>
+							</div> 
 						</div>
 					</div>
 
