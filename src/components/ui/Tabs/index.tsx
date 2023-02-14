@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 export const Tabs = ({ tabs, className }: TabsProps) => {
-	const varients = {
+	const variants = {
 		current:
 			'inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900 cursor-pointer',
 		notCurrent:
@@ -15,7 +15,7 @@ export const Tabs = ({ tabs, className }: TabsProps) => {
 				<Link
 					key={index}
 					to={tab.href}
-					className={varients[tab.current ? 'current' : 'notCurrent'] + ' w-fit'}
+					className={variants[tab.current ? 'current' : 'notCurrent'] + ' w-fit'}
 				>
 					{tab.label}
 				</Link>
