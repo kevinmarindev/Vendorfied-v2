@@ -1,4 +1,3 @@
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { logout as logoutApi } from 'api/user';
 
 import { Disclosure } from '@headlessui/react';

@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Private from 'components/layouts/Private';
 
@@ -7,7 +7,6 @@ import Documents from './Documents';
 import Groups from './Documents/Groups';
 import NewVendor from './NewVendor';
 import Vendors from './Vendors';
-
 
 export const AuthenticatedApp = () => {
 	return (
