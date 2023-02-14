@@ -15,7 +15,7 @@ export const Documents = () => {
 	const location = useLocation();
 	console.log(location.pathname);
 	return (
-		<div className='p-4'>
+		<>
 			<h6 className='text-xl'>Document Management</h6>
 			<div className='flex gap-3'>
 				<Card className='w-full'>
@@ -118,7 +118,7 @@ export const Documents = () => {
 					</div>
 				</Card>
 			</div>
-		</div>
+		</>
 	);
 };
 
