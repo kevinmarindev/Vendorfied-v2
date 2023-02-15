@@ -6,7 +6,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import Logo from 'assets/img/vendorfied-1.png';
 
-import Avatar from 'components/ui/Avatar';
 import { Button } from 'components/ui/Inputs/Button';
 
 export const Navigation = () => {

@@ -1,6 +1,5 @@
 import { useFormikContext } from 'formik';
 
-import { Button } from 'components/ui/Inputs/Button';
 import Text from 'components/ui/Inputs/Text';
 
 export const VendorInfo = () => {
@@ -8,11 +7,13 @@ export const VendorInfo = () => {
 
 	return (
 		<>
-			<div className='text-1xl mt-10 font-squada text-secondary'> Step 01/04</div>
-			<div className='mb-5 mt-10 font-squada text-4xl '>Company Info</div>
-			<label className='block pb-4  font-squada text-secondary'>Create the vendors profile</label>
+			<div className='mt-10 font-squada text-xl text-secondary'> Step 01/04</div>
+			<div className='mb-5 mt-7 font-squada text-5xl'>Company Info</div>
+			<label className='block pb-8 font-squada text-xl text-secondary'>
+				Create the vendors profile
+			</label>
 
-			<div className='w-full flex-col space-y-2'>
+			<div className='w-full flex-col space-y-4'>
 				<Text name='companyName' label='Name' />
 				<Text name='companyPhoneNumber' label='Phone Number' type='tel' />
 				<Text name='companyEmail' label='Email' type='email' />
