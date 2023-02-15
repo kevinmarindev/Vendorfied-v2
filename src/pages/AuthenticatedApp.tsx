@@ -21,7 +21,7 @@ export const AuthenticatedApp = () => {
 				<Route path='/newVendor' element={<NewVendor />} />
 				<Route path='/newAccount' element={<NewAccount />} />
 				<Route path='/profileInfo' element={<ProfileInfo />} />
-				{/* <Route path='*' element={<div>Warning</div>} /> */}
+				<Route path='*' element={<div>Warning</div>} />
 			</Route>
 		</Routes>
 	);

@@ -14,11 +14,15 @@ export const PrimaryContact = () => {
 			</label>
 
 			<div className='w-full flex-col space-y-2'>
-				<label className='pb-5 font-sora text-sm font-bold'>Primary Contact Info</label>
+				<div className='pb-2'>
+					<label className='font-sora text-sm font-bold'>Primary Contact Info</label>
+				</div>
 				<Text name='primaryName' label='Name' />
 				<Text name='primaryPhoneNumber' label='Phone Number' type='tel' />
 				<Text name='primaryEmail' label='Email' type='email' />
-				<label className='font-sora text-sm font-bold'>Secondary Contact Info (Optional)</label>
+				<div className='pb-2 pt-2'>
+					<label className='font-sora text-sm font-bold'>Secondary Contact Info (Optional)</label>
+				</div>
 				<Text name='secondaryName' label='Name' />
 				<Text name='secondaryPhoneNumber' label='Phone Number' type='tel' />
 				<Text name='secondaryEmail' label='Email' type='email' />

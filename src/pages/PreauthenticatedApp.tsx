@@ -31,10 +31,10 @@ export const PreauthenticatedApp = () => {
 			<Routes>
 				<Route path='/' element={<Public />}>
 					<Route index element={<LandingScreen />} />
-					<Route path='register' element={<PreAuthScreenRegister />} />
+					<Route path='/register' element={<PreAuthScreenRegister />} />
 				</Route>
 
-				<Route path='login' element={<Auth />}>
+				<Route path='/login' element={<Auth />}>
 					<Route index element={<Login />} />
 				</Route>
 			</Routes>

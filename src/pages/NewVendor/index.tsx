@@ -90,7 +90,7 @@ export const NewVendor = () => {
 								) : (
 									<VendorTags />
 								)}
-								<label className='text-bold block pt-4 font-squada text-xl text-secondary'>
+								<label className='text-bold block pt-8 font-squada text-xl text-secondary'>
 									This information will be securely saved as per the{' '}
 									<span className='font-squada'>Terms and Conditions & Privacy Policy</span>
 								</label>
