@@ -54,9 +54,9 @@ export const VendorDetails = () => {
 
 	return (
 		<>
-			<div className='text-1xl mt-10 font-squada text-secondary'> Step 03/04</div>
-			<div className='mb-5 mt-10 font-squada text-4xl '>Vendor Details</div>
-			<label className='block pb-4  font-squada text-secondary'>
+			<div className='mt-10 font-squada text-xl text-secondary'> Step 03/04</div>
+			<div className='mb-5 mt-7 font-squada text-5xl'>Vendor Details</div>
+			<label className='block pb-8 font-squada text-xl text-secondary'>
 				Add the vendors company details.
 			</label>
 
