@@ -29,6 +29,7 @@ export const Register = () => {
 	const [open, setOpen] = useState(false);
 	// const [selected, setSelected] = useState([1,2,3]);
 	const [continued, setContinued] = useState(false);
+	const [next, setNext] = useState(false);
 
 	return (
 		<div className='flex min-h-screen items-center rounded-3xl bg-gradient-to-br from-vendorfiedBlue/[.1] to-vendorfiedGreen/[.1]'>
@@ -140,7 +141,7 @@ export const Register = () => {
 				</div>
 			) : (
 				continued && (
-					<div className='mx-auto  sm:w-full lg:w-1/4 max-w-7xl rounded-3xl bg-white px-4 py-16 sm:px-6 lg:px-8 '>
+					<div className='mx-auto max-w-7xl rounded-3xl bg-white px-4 py-16 sm:w-full sm:px-6 lg:w-1/4 lg:px-8 '>
 						<div>
 							<h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Create an account</h2>
 						</div>
@@ -177,10 +178,10 @@ export const Register = () => {
 												placeholder='Email address'
 											/>
 											{/* <ErrorMessage
-                              name="email"
-                              component="div"
-                              className="text-red-500 mt-1 text-sm"
-                            /> */}
+                          name="email"
+                          component="div"
+                          className="text-red-500 mt-1 text-sm"
+                          /> */}
 										</div>
 										<div className='mt-4'>
 											<label htmlFor='password' className='sr-only'>
@@ -201,10 +202,10 @@ export const Register = () => {
 												placeholder='Password'
 											/>
 											{/* <ErrorMessage
-                              name="password"
-                              component="div"
-                              className="text-red-500 mt-1 text-sm"
-                            /> */}
+                          ame="password"
+                          omponent="div"
+                          lassName="text-red-500 mt-1 text-sm"
+                          > */}
 										</div>
 										<div className='mt-4'>
 											<label htmlFor='confirmPassword' className='sr-only'>
@@ -225,16 +226,16 @@ export const Register = () => {
 												placeholder='Confirm Password'
 											/>
 											{/* <ErrorMessage
-                      name="confirmPassword"
-                      component="div"
-                      className="text-red-500 mt-1 text-sm"
-                      /> */}
+                          name="confirmPassword"
+                          component="div"
+                          className="text-red-500 mt-1 text-sm"
+                          /> */}
 										</div>
 									</div>
-										<p>
-											*Password must be at least 8 characters and include at least 1 number and special
-											character.
-										</p>
+									<p>
+										*Password must be at least 8 characters and include at least 1 number and special
+										character.
+									</p>
 									<div className='flex items-center justify-between'>
 										<div className='text-sm'>
 											<a href='#' className='hover:text-vendorfiedGreen-600 font-medium text-vendorfiedGreen'>
@@ -243,6 +244,9 @@ export const Register = () => {
 										</div>
 										<div>
 											<button
+												onClick={() => {
+													setNext(true);
+												}}
 												type='submit'
 												className='hover:bg-vendorfiedGreen-600 group relative flex w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-vendorfiedBlue to-vendorfiedGreen py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-vendorfiedGreen focus:ring-offset-2'
 											>
