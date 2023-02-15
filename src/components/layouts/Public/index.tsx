@@ -11,13 +11,12 @@ import Navigation from './Navigation';
 
 export const Public = () => {
 	return (
-    // <main className='relative h-screen w-full  overflow-scroll '>
-    <main >
-		<Navigation />
-		<section className='m-3'>
-			<Outlet />
-		</section>
-	</main>
+		<main className='relative h-screen w-full '>
+			<Navigation />
+			<section className='mx-auto'>
+				<Outlet />
+			</section>
+		</main>
 	);
 };
 

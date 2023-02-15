@@ -48,9 +48,9 @@ export const NewVendor = () => {
 				}}
 			>
 				{({ values, validateForm }) => (
-					<div className='flex h-screen gap-3'>
+					<div className='flex h-screen gap-4'>
 						{console.log(values.vendorLogo)}
-						<div className='hidden w-2/3 justify-center bg-gradient-to-br from-blue-500/[.5] to-emerald-400/[.4] p-2 md:flex lg:w-1/2'>
+						<div className='hidden w-2/3 justify-center bg-gradient-to-br from-blue-500/[.5] to-emerald-400/[.4] p-2 pt-10 md:flex lg:w-1/2'>
 							<VendorfiedCard
 								logo={values.vendorLogo ? false : true}
 								icon={faCheck}
@@ -74,10 +74,13 @@ export const NewVendor = () => {
 							/>
 						</div>
 						<div className='relative flex w-full justify-center md:w-3/4'>
-							<div className='absolute left-0 cursor-pointer font-squada text-secondary' onClick={back}>
+							<div
+								className='absolute left-0 cursor-pointer pt-10 font-squada text-xl text-secondary'
+								onClick={back}
+							>
 								{'<'} Back
 							</div>
-							<div className='w-1/2 flex-col'>
+							<div className='w-1/2 flex-col pt-1'>
 								{page === 1 ? (
 									<VendorInfo />
 								) : page === 2 ? (
@@ -87,7 +90,7 @@ export const NewVendor = () => {
 								) : (
 									<VendorTags />
 								)}
-								<label className='text-bold text-md block pt-4 font-squada text-secondary'>
+								<label className='text-bold block pt-8 font-squada text-xl text-secondary'>
 									This information will be securely saved as per the{' '}
 									<span className='font-squada'>Terms and Conditions & Privacy Policy</span>
 								</label>
@@ -98,7 +101,7 @@ export const NewVendor = () => {
 										color='brand'
 										type={page !== 4 ? 'button' : 'submit'}
 										onClick={() => (page !== 4 ? setPage(page + 1) : null)}
-										className='text-1xl flex w-1/2 font-squada'
+										className='flex h-10 w-32 font-squada text-base'
 									>
 										{page !== 4 ? 'Next Step' : 'Create Vendor'}
 									</Button>
