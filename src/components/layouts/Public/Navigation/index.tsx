@@ -88,7 +88,15 @@ export const Navigation = () => {
 										to='/register'
 										className={variants[location.pathname.startsWith('/register') ? 'current' : 'notCurrent']}
 									>
-										Sign Up
+								<Button
+                                        onClick={() => navigate('/register')}
+                                        className={variants[location.pathname.startsWith('/Register') ? 'current' : 'notCurrent']}
+                                        variant='solid'
+                                        color='brand'
+                                        type='submit'
+                                    >
+                                        Sign Up
+                                    </Button>
 									</Link>
 									<Link
 										to='/login'

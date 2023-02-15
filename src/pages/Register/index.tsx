@@ -32,7 +32,7 @@ export const Register = () => {
 	const [next, setNext] = useState(false);
 
 	return (
-		<div className='flex min-h-screen items-center rounded-3xl bg-gradient-to-br from-vendorfiedBlue/[.1] to-vendorfiedGreen/[.1]'>
+		<div className='flex min-h-screen items-center rounded-3xl bg-gradient-to-br from-brandBlue/[.1] to-brandGreen/[.1]'>
 			{!continued ? (
 				<div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
 					{/* Grid Layout */}
@@ -173,7 +173,7 @@ export const Register = () => {
 													'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
 													(errors.email && touched.email
 														? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
-														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-vendorfiedGreen focus:outline-none focus:ring-vendorfiedGreen')
+														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
 												}
 												placeholder='Email address'
 											/>
@@ -197,7 +197,7 @@ export const Register = () => {
 													'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
 													(errors.password && touched.password
 														? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
-														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-vendorfiedGreen focus:outline-none focus:ring-vendorfiedGreen')
+														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
 												}
 												placeholder='Password'
 											/>
@@ -221,7 +221,7 @@ export const Register = () => {
 													'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
 													(errors.confirmPassword && touched.confirmPassword
 														? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
-														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-vendorfiedGreen focus:outline-none focus:ring-vendorfiedGreen')
+														: 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
 												}
 												placeholder='Confirm Password'
 											/>
@@ -238,7 +238,7 @@ export const Register = () => {
 									</p>
 									<div className='flex items-center justify-between'>
 										<div className='text-sm'>
-											<a href='#' className='hover:text-vendorfiedGreen-600 font-medium text-vendorfiedGreen'>
+											<a href='#' className='hover:text-brandGreen-600 font-medium text-brandGreen'>
 												Forgot password?
 											</a>
 										</div>
@@ -248,7 +248,7 @@ export const Register = () => {
 													setNext(true);
 												}}
 												type='submit'
-												className='hover:bg-vendorfiedGreen-600 group relative flex w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-vendorfiedBlue to-vendorfiedGreen py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-vendorfiedGreen focus:ring-offset-2'
+												className='hover:bg-brandGreen-600 group relative flex w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-brandBlue to-brandGreen py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-brandGreen focus:ring-offset-2'
 											>
 												Next
 											</button>
