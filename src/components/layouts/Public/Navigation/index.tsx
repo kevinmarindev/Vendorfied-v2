@@ -17,6 +17,7 @@ import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { Fragment } from 'react';
+import Avatar from 'components/ui/Avatar';
 
 export const Navigation = () => {
 	const location = useLocation();
