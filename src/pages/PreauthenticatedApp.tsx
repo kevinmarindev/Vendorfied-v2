@@ -34,8 +34,9 @@ export const PreauthenticatedApp = () => {
 					<Route path='/register' element={<PreAuthScreenRegister />} />
 				</Route>
 
-				<Route path='/login' element={<Auth />}>
+				<Route path='*' element={<Auth />}>
 					<Route index element={<Login />} />
+					<Route path='*' element={<Login />} />
 				</Route>
 			</Routes>
 		);
