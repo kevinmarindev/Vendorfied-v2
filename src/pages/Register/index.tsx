@@ -69,29 +69,29 @@ export const Register = () => {
 								<div className='mb-4 flex items-center'>
 									<input type='checkbox' className='mr-4 h-5 w-5' />
 									<h3 className='text-4xl font-bold'>Starter</h3>
+								<p className='mx-auto text-2xl'>$20/mo.</p>
 								</div>
-								<p className='text-sm text-gray-500'>
+								<p className='text-md text-gray-500'>
 									Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
 									ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
 									sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
 									adipiscing amet. Euismod elit, vel tellus, sed in sapien..
 								</p>
-								<p>$20/mo.</p>
 							</div>
 						</div>
 						<div className='rounded-lg bg-white shadow'>
 							<div className='px-6 py-8'>
 								<div className='mb-4 flex items-center'>
 									<input type='checkbox' className='mr-4 h-5 w-5' />
-									<h3 className='text-4xl font-bold'>Standard</h3>
+                  <h3 className='text-4xl font-bold'>Standard</h3>
+								  <p className='mx-auto text-2xl'>$40/mo.</p>
 								</div>
-								<p className='text-sm text-gray-500'>
+								<p className='text-md text-gray-500'>
 									Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
 									ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
 									sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
 									adipiscing amet. Euismod elit, vel tellus, sed in sapien..
 								</p>
-								<p>$40/mo.</p>
 							</div>
 						</div>
 						<div className='rounded-lg bg-white shadow'>
@@ -99,14 +99,14 @@ export const Register = () => {
 								<div className='mb-4 flex items-center'>
 									<input type='checkbox' className='mr-4 h-5 w-5' />
 									<h3 className='text-4xl font-bold'>Pro</h3>
+								<p className='mx-auto text-2xl'>$100/mo.</p>
 								</div>
-								<p className='text-sm text-gray-500'>
+								<p className='text-md text-gray-500'>
 									Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
 									ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
 									sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
 									adipiscing amet. Euismod elit, vel tellus, sed in sapien..
 								</p>
-								<p>$100/mo.</p>
 							</div>
 						</div>
 						<Button className='w-full bg-gradient-to-r from-brandBlue to-brandGreen'>
