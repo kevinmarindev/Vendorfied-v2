@@ -272,7 +272,7 @@ export const Register = () => {
                   <p className='mx-auto text-2xl'>$20/mo.</p>
                 </div>
                           {/* divider */}
-                <div className='mb-4 flex items-center border-t-indigo-500 border-2	'>
+                <div className='mb-4 flex items-center border-t-brandBlue border-t-2	'>
                   <h3 className='text-xl font-bold'>Total</h3>
                   <p className='mx-auto text-2xl'>$20.00</p>
                 </div>
@@ -283,56 +283,129 @@ export const Register = () => {
           </div>
           {/* column 2 */}
           <div className='space-y-6 md:space-y-8 '>
-            <div className='rounded-lg bg-white shadow hover:cursor-pointer'>
-              <div className='px-6 py-8'>
-                <div className='mb-4 flex items-center'>
-                  <input type='checkbox' className='mr-4 h-5 w-5 ' />
-                  <h3 className='text-4xl font-bold'>Starter</h3>
-                  <p className='mx-auto text-2xl'>$20/mo.</p>
+          <div>
+            <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Billing Address</h2>
+          </div>
+          <Formik
+            initialValues={{
+              address: '',
+              city: '',
+              zipCode: '',
+              country: '',
+              state: '',
+            }}
+            validationSchema={SignupSchema}
+            onSubmit={(values) => {
+              console.log(values);
+            }}
+          >
+            {({ errors, touched }) => (
+              <Form className='mt-8 space-y-6'>
+                <div className='-space-y-px rounded-2xl shadow-sm bg-white p-4 border-2 border-brandBlue '>
+                  <div>
+                    <label htmlFor='address' className='sr-only'>
+                      Address
+                    </label>
+                    <Field
+                      id='address'
+                      name='address'
+                      type='address'
+                      autoComplete='address'
+                      required
+                      className={
+                        'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
+                        (errors.address && touched.address
+                          ? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
+                          : 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
+                      }
+                      placeholder='Address'
+                    />
+                  </div>
+                  <div className='mt-4'>
+                    <label htmlFor='password' className='sr-only'>
+                      City
+                    </label>
+                    <Field
+                      id='city'
+                      name='city'
+                      type='city'
+                      autoComplete='current-city'
+                      required
+                      className={
+                        'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
+                        (errors.city && touched.city
+                          ? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
+                          : 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
+                      }
+                      placeholder='City'
+                    />
+                  </div>
+                  <div className='mt-4'>
+                    <label htmlFor='zipCode' className='sr-only'>
+                     Zip Code
+                    </label>
+                    <Field
+                      id='zipCode'
+                      name='zipCode'
+                      type='password'
+                      autoComplete='current-password'
+                      required
+                      className={
+                        'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
+                        (errors.zipCode && touched.zipCode
+                          ? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
+                          : 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
+                      }
+                      placeholder='Zip Code'
+                    />
+                  </div>
+                  <div className='mt-4'>
+                    <label htmlFor='confirmPassword' className='sr-only'>
+                    Country
+                    </label>
+                    <Field
+                      id='country'
+                      name='country'
+                      type='password'
+                      autoComplete='current-password'
+                      required
+                      className={
+                        'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
+                        (errors.country && touched.country
+                          ? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
+                          : 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
+                      }
+                      placeholder='Country'
+                    />
+                  </div>
+                  <div className='mt-4'>
+                    <label htmlFor='state' className='sr-only'>
+                     State
+                    </label>
+                    <Field
+                      id='state'
+                      name='state'
+                      type='password'
+                      autoComplete='current-password'
+                      required
+                      className={
+                        'relative my-8 block w-full appearance-none rounded-xl border px-3 py-2 ' +
+                        (errors.state && touched.state
+                          ? 'border-red-500 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500'
+                          : 'border-gray-300 text-gray-900 placeholder-gray-500 focus:border-brandGreen focus:outline-none focus:ring-brandGreen')
+                      }
+                      placeholder='State'
+                    />
+                  </div>
                 </div>
-                <p className='text-md text-gray-500'>
-                  Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
-                  ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
-                  adipiscing amet. Euismod elit, vel tellus, sed in sapien..
-                </p>
-              </div>
-            </div>
-            <div className='rounded-lg bg-white shadow hover:cursor-pointer'>
-              <div className='px-6 py-8'>
-                <div className='mb-4 flex items-center'>
-                  <input type='checkbox' className='mr-4 h-5 w-5' />
-                  <h3 className='text-4xl font-bold'>Standard</h3>
-                  <p className='mx-auto text-2xl'>$40/mo.</p>
-                </div>
-                <p className='text-md text-gray-500'>
-                  Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
-                  ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
-                  adipiscing amet. Euismod elit, vel tellus, sed in sapien..
-                </p>
-              </div>
-            </div>
-            <div className='rounded-lg bg-white shadow hover:cursor-pointer'>
-              <div className='px-6 py-8'>
-                <div className='mb-4 flex items-center'>
-                  <input type='checkbox' className='mr-4 h-5 w-5' />
-                  <h3 className='text-4xl font-bold'>Pro</h3>
-                  <p className='mx-auto text-2xl'>$100/mo.</p>
-                </div>
-                <p className='text-md text-gray-500'>
-                  Loremipsum dolor sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum
-                  ornare proin adipiscing amet. Euismod elit, vel tellus, sed in sapien. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Cras sed justo, sed fermentum ornare proin
-                  adipiscing amet. Euismod elit, vel tellus, sed in sapien..
-                </p>
-              </div>
-            </div>
+              </Form>
+            )}
+          </Formik>
             <Button
               className='w-full bg-gradient-to-r from-brandBlue to-brandGreen '
               onClick={() => setContinued(true)}
             >
-              <p className='text-xl text-white'>Continue</p>
+              <p className='text-xl text-white'>Proceed to Payment</p>
             </Button>
           </div>
         </div>
