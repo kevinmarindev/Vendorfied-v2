@@ -1,13 +1,16 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+import Navigation from './Navigation';
 
 export const Public = () => {
 	return (
-		<div className='w-screen h-screen flex'>
-			<div className='w-1/2 h-screen bg-gradient-to-br from-blue-500/[.7] to-emerald-400/[.7]'></div>
-			<div className='w-1/2 h-screen'>
+		<main className='relative h-screen w-full '>
+			<Navigation />
+			<section className='mx-auto'>
 				<Outlet />
-			</div>
-		</div>
+			</section>
+		</main>
 	);
 };
+
+export default Public;

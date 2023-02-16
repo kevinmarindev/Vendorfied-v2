@@ -27,7 +27,7 @@ export const VendorfiedCard = ({
 	companyAddress = '1234 Vendorfied Way, Vendorfied, CA 12345',
 	contactName = 'John Smith',
 	contactPhoneNumber = '123-456-7890',
-	contactEmail = 'support#vendrotfied.com'
+	contactEmail = 'support#vendorfied.com'
 }: VendorfiedCardProps) => (
 	<Card className=' max-h-[30rem] flex-row space-y-2 text-left'>
 		<div className='relative flex h-36 items-center justify-center pb-4'>
@@ -41,12 +41,12 @@ export const VendorfiedCard = ({
 			) : (
 				<Avatar size='lg' className='absolute top-0 z-10 ' src={src} />
 			)}
-			<div className='absolute bottom-0 right-0 h-24 w-full bg-gray-100 pt-12 text-center'>
+			<div className='absolute bottom-0 right-0 h-24 w-full bg-gray-100 pt-12 pb-5 text-center'>
 				<h2>{title}</h2>
 				<label>{subTitle}</label>
 			</div>
 		</div>
-		<div className='w-full overflow-scroll rounded-xl bg-gray-100 p-3'>
+		<div className='rounded-1xl  w-full overflow-scroll bg-gray-100 p-3'>
 			<h2 className='mb-2'>Company Info</h2>
 			<div className='grid grid-cols-[25px_1fr] gap-x-2 gap-y-2'>
 				<FontAwesomeIcon icon={faPhoneAlt} className='mx-auto self-center text-primary' />
@@ -59,7 +59,7 @@ export const VendorfiedCard = ({
 				<span className='break-words text-sm'>{companyAddress}</span>
 			</div>
 		</div>
-		<div className='w-full overflow-scroll rounded-xl bg-gray-100 p-3'>
+		<div className='rounded-1xl  w-full overflow-scroll bg-gray-100 p-3'>
 			<h2 className='mb-2'>Contact Info</h2>
 			<div className='grid grid-cols-[25px_1fr] gap-x-2 gap-y-2'>
 				<FontAwesomeIcon icon={faPerson} className='mx-auto  self-center text-primary' />

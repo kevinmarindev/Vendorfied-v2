@@ -9,13 +9,14 @@ export const VendorTags = () => {
 
 	return (
 		<>
-			<div className='text-1xl mt-10 font-squada text-secondary'> Step 04/04</div>
-			<div className='mb-5 mt-10 font-squada text-4xl '>Vendor Tags and Documents</div>
-			<label className='block pb-4  font-squada text-secondary'>
+			<div className='mt-10 font-squada text-xl text-secondary'> Step 04/04</div>
+			<div className='mb-5 mt-7 font-squada text-5xl '>Vendor Tags and Documents</div>
+			<label className='block pb-8 font-squada text-xl text-secondary'>
 				Select the vendor type and attached required documents.
 			</label>
-
-			<label className='font-sora text-sm font-bold'>Primary Contact Info</label>
+			<div className='pb-2'>
+				<label className='font-sora text-sm font-bold'>Vendor Type</label>
+			</div>
 			<div className='w-full flex-col space-y-2'>
 				<Select name='vendorType' label='' options={[]} placeholder='Select' />
 			</div>
