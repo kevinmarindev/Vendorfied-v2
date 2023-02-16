@@ -1,11 +1,13 @@
 import { useRef, useState } from 'react';
 
 import clsx from 'clsx';
+import { Formik } from 'formik';
 import { useFormikContext } from 'formik';
 
+import { Button } from 'components/ui/Inputs/Button';
 import Text from 'components/ui/Inputs/Text';
 
-export const VendorDetails = () => {
+export const NewCompanyInfo = () => {
 	const { setFieldValue } = useFormikContext();
 
 	// drag state
@@ -54,11 +56,9 @@ export const VendorDetails = () => {
 
 	return (
 		<>
-			<div className='mt-10 font-squada text-xl text-secondary'> Step 03/04</div>
-			<div className='mb-5 mt-7 font-squada text-5xl'>Vendor Details</div>
-			<label className='block pb-8 font-squada text-xl text-secondary'>
-				Add the vendors company details.
-			</label>
+			<div className='text-1xl mt-10 font-squada text-secondary'> Step 01/02</div>
+			<div className='mb-5 mt-5 font-squada text-4xl'>Company Info</div>
+			<label className='block pb-4 font-squada text-secondary'>Create your company profile</label>
 
 			<div
 				onDragEnter={handleDrag}
@@ -70,7 +70,7 @@ export const VendorDetails = () => {
 					htmlFor='input-file-upload'
 					className={clsx(
 						dragActive && 'drag-active',
-						' h-15  flex  items-center justify-center rounded-xl border-2 border-dashed border-primary/[.4] bg-primary/[.10]'
+						' h-15 flex items-center justify-center rounded-xl border-2 border-dashed border-primary/[.4] bg-primary/[.10]'
 					)}
 				>
 					<div>
@@ -93,9 +93,22 @@ export const VendorDetails = () => {
 					></div>
 				)}
 			</div>
-			<Text type='textarea' name='description' label='Description (Optional)' className='mt-4' />
+
+			<div className='w-full flex-col space-y-2'>
+				<Text name='companyName' label='Company Name' />
+				<Text name='companyPhoneNumber' label='Company Phone' />
+				<Text name='companyEmail' label='Email' />
+				<Text name='website' label='Website' />
+				<Text name='address' label='Address' />
+				<Text name='secondaryAddress' label='Address Line 2' />
+				<div className='flex md:grid md:grid-cols-3 md:gap-4'>
+					<Text name='city' label='City' />
+					<Text name='state' label='State' />
+					<Text name='zip' label='Zip Code' />
+				</div>
+			</div>
 		</>
 	);
 };
 
-export default VendorDetails;
+export default NewCompanyInfo;
