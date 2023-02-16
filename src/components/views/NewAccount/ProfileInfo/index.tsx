@@ -5,7 +5,7 @@ import { useFormikContext } from 'formik';
 
 import Text from 'components/ui/Inputs/Text';
 
-export const VendorDetails = () => {
+export const ProfileInfo = () => {
 	const { setFieldValue } = useFormikContext();
 
 	// drag state
@@ -54,11 +54,9 @@ export const VendorDetails = () => {
 
 	return (
 		<>
-			<div className='mt-10 font-squada text-xl text-secondary'> Step 03/04</div>
-			<div className='mb-5 mt-7 font-squada text-5xl'>Vendor Details</div>
-			<label className='block pb-8 font-squada text-xl text-secondary'>
-				Add the vendors company details.
-			</label>
+			<div className='text-1xl mt-10 font-squada text-secondary'> Step 02/02</div>
+			<div className='mb-5 mt-5 font-squada text-4xl'>Profile Info</div>
+			<label className='block pb-4 font-squada text-secondary'>Create your user profile</label>
 
 			<div
 				onDragEnter={handleDrag}
@@ -70,7 +68,7 @@ export const VendorDetails = () => {
 					htmlFor='input-file-upload'
 					className={clsx(
 						dragActive && 'drag-active',
-						' h-15  flex  items-center justify-center rounded-xl border-2 border-dashed border-primary/[.4] bg-primary/[.10]'
+						' h-15 flex  items-center justify-center rounded-xl border-2 border-dashed border-primary/[.4] bg-primary/[.10]'
 					)}
 				>
 					<div>
@@ -93,9 +91,15 @@ export const VendorDetails = () => {
 					></div>
 				)}
 			</div>
-			<Text type='textarea' name='description' label='Description (Optional)' className='mt-4' />
+
+			<div className='w-full flex-col space-y-2'>
+				<Text name='primaryName' label='First name' />
+				<Text name='primaryLastName' label='Last name' />
+				<Text name='primaryPhoneNumber' label='Phone number' />
+				<Text name='primaryEmail' label='Email address' />
+			</div>
 		</>
 	);
 };
 
-export default VendorDetails;
+export default ProfileInfo;
