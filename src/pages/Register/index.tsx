@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
+
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-
 
 // Application Screen || Define Imports
 // =================================================================================================
 // =================================================================================================
 import { Button } from 'components/ui/Inputs/Button';
-
 
 // Application Screen || Define Exports
 // =================================================================================================
@@ -583,13 +582,14 @@ export const Register = () => {
 			) : (
 				complete === true && (
 					<div className='mx-auto max-w-7xl rounded-3xl px-4 py-16 sm:w-full sm:px-6 lg:w-1/4 lg:px-8 '>
-						
-							<h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Welcome to Vendorfied</h2>
-                   
-                   <p className='mt-6 mb-12 text-center text-xl  '>Before we begin you will need to set up your company and personal profile.</p>
-						<Button
-							className='w-full bg-gradient-to-r from-brandBlue to-brandGreen '
-						>
+						<h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
+							Welcome to Vendorfied
+						</h2>
+
+						<p className='mt-6 mb-12 text-center text-xl  '>
+							Before we begin you will need to set up your company and personal profile.
+						</p>
+						<Button className='w-full bg-gradient-to-r from-brandBlue to-brandGreen '>
 							<p className='text-xl text-white'>Get Started</p>
 						</Button>
 					</div>
