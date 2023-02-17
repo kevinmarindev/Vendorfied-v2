@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import { Button } from 'components/ui/Inputs/Button';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 const SignupSchema = Yup.object().shape({
 	email: Yup.string().email('Invalid email').required('Required'),
 	password: Yup.string()
@@ -270,10 +277,10 @@ export const Register = () => {
 								amet. Euismod elit, vel tellus, sed in sapien.
 							</p>
 							<div className='space-y-4'>
-								<details>
+								<details open>
 									<summary className='flex cursor-pointer items-center justify-evenly px-4 py-2 text-xl font-bold'>
 										<span className='px-3 text-xl' onClick={(e) => e.preventDefault()}>
-											{!open ? '-' : '+'}
+											-
 										</span>
 										<span>Order Summary</span>
 									</summary>
@@ -437,10 +444,10 @@ export const Register = () => {
 								amet. Euismod elit, vel tellus, sed in sapien.
 							</p>
 							<div className='space-y-4'>
-								<details>
+								<details open>
 									<summary className='flex cursor-pointer items-center justify-evenly px-4 py-2 text-xl font-bold'>
 										<span className='px-3 text-xl' onClick={(e) => e.preventDefault()}>
-											{!open ? '-' : '+'}
+											-
 										</span>
 										<span>Order Summary</span>
 									</summary>
@@ -579,7 +586,7 @@ export const Register = () => {
 						
 							<h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Welcome to Vendorfied</h2>
                    
-                   <p className='my-6 text-center text-xl  '>Before we begin you will need to set up your company and personal profile.</p>
+                   <p className='mt-6 mb-12 text-center text-xl  '>Before we begin you will need to set up your company and personal profile.</p>
 						<Button
 							className='w-full bg-gradient-to-r from-brandBlue to-brandGreen '
 						>
