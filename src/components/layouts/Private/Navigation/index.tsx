@@ -53,7 +53,7 @@ export const Navigation = () => {
 								</div>
 							</div>
 							<div className='hidden sm:ml-6 sm:flex sm:items-center '>
-								<div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
+								<div className='hidden text-xl sm:ml-6 sm:flex sm:space-x-8 '>
 									<Link to='/' className={variants[location.pathname === '/' ? 'current' : 'notCurrent']}>
 										Dashboard
 									</Link>

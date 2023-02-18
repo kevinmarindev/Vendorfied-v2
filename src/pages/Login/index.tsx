@@ -1,8 +1,8 @@
 import { login as loginApi } from 'api/user';
+
 // Application Screen || Define Imports
 // =================================================================================================
 // =================================================================================================
-
 // Application Screen || Define Exports
 // =================================================================================================
 // =================================================================================================
@@ -39,10 +39,10 @@ export const Login = () => {
 
 	return (
 		<div className='flex h-screen w-full flex-col items-center justify-center p-16'>
-			<img src={Logo} className='w-24 object-cover pb-4' />
-			<h1 className='font-squada text-5xl font-bold text-gray-900'>Welcome Back</h1>
+			<img src={Logo} className='w-22 object-cover pb-10' />
+			<h1 className='pb-8 font-squada text-5xl font-bold text-gray-900'>Welcome Back,</h1>
 			<h1 className='font-squada text-xl font-bold text-gray-500/[.8]'>
-				Please enter your login details
+				Please enter your login details.
 			</h1>
 			<Formik
 				initialValues={{ email: '', password: '' }}
@@ -63,7 +63,7 @@ export const Login = () => {
 				{({ values, handleChange, handleSubmit, isValid, isSubmitting }) => (
 					<form onSubmit={handleSubmit} className='w-full pt-24'>
 						<div className='flex flex-col space-y-6'>
-							<Text name='email' label='Email' />
+							<Text name='email' label='Email' className='pb-4' />
 							<Text name='password' label='Password' type='password' />
 							<div className='flex justify-between'>
 								<CheckBox name='remember' label='Remember me' className='text-lg' />
