@@ -1,19 +1,24 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Formik } from 'formik';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-import { Formik } from 'formik';
-
-import Logo from 'assets/img/vendorfied.png';
-
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import Avatar from 'components/ui/Avatar';
 import { Button } from 'components/ui/Inputs/Button';
+import Logo from 'assets/img/vendorfied.png';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
 import NewCompanyInfo from 'components/views/NewAccount/NewCompanyInfo/index';
 import ProfileInfo from 'components/views/NewAccount/ProfileInfo/index';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const NewAccount = () => {
 	const navigate = useNavigate();
 	const back = () => navigate(-1);
