@@ -1,13 +1,10 @@
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+
+
 // Application Screen || Define Imports
 // =================================================================================================
 // =================================================================================================
-
-// Application Screen || Define Exports
-// =================================================================================================
-// =================================================================================================
 import Private from 'components/layouts/Private';
-
 import Dashboard from './Dashboard';
 import Documents from './Documents';
 import Groups from './Documents/Groups';
@@ -15,6 +12,10 @@ import NewAccount from './NewAccount';
 import NewVendor from './NewVendor';
 import Vendors from './Vendors';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const AuthenticatedApp = () => {
 	return (
 		<Routes>

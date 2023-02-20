@@ -44,7 +44,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<Disclosure as='nav' className=' sticky top-0 z-50 bg-white/[.50] '>
+		<Disclosure as='nav' className=' sticky top-0 z-50 bg-white '>
 			{({ open }) => (
 				<>
 					<div className='mx-4'>
