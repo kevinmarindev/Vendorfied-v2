@@ -1,18 +1,23 @@
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { logout as logoutApi } from 'api/user';
-
+import { Fragment } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Fragment } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import clsx from 'clsx';
-
 import Logo from 'assets/img/vendorfied-1.png';
-
 import Avatar from 'components/ui/Avatar';
+import { logout as logoutApi } from 'api/user';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
