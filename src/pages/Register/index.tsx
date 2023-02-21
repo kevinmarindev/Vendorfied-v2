@@ -55,7 +55,7 @@ export const Register = () => {
 	};
 
 	return (
-		<div className='flex min-h-screen items-center rounded-3xl bg-gradient-to-br from-brandBlue/[.1] to-brandGreen/[.1]'>
+		<div className='flex min-h-screen items-center rounded-3xl bg-hero bg-no-repeat bg-cover bg-center bg-fixed bg-opacity-50'>
 			{!continued && !next && !proceed && !complete ? (
 				<div className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
 					{/* Grid Layout */}

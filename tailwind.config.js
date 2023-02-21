@@ -28,7 +28,10 @@ module.exports = {
             },
             maxWidth: {
                 '8xl': '100rem'
-            }
+            },
+            backgroundImage: {
+                'hero': "url('../assets/img/gradient-v.png')",
+              },
         }
     }
 };
