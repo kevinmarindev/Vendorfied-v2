@@ -1,24 +1,24 @@
-import { logout as logoutApi } from 'api/user';
-// Application Screen || Define Imports
-// =================================================================================================
-// =================================================================================================
-
-// Application Screen || Define Exports
-// =================================================================================================
-// =================================================================================================
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-import Logo from 'assets/img/vendorfied-1.png';
-
-import { Button } from 'components/ui/Inputs/Button';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { Fragment } from 'react';
+
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+import { logout as logoutApi } from 'api/user';
+import Logo from 'assets/img/vendorfied-1.png';
+import { Button } from 'components/ui/Inputs/Button';
 import Avatar from 'components/ui/Avatar';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
