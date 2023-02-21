@@ -1,10 +1,17 @@
-import PreauthenticatedApp from 'pages/PreauthenticatedApp';
-
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+import PreauthenticatedApp from 'pages/PreauthenticatedApp';
 import './styles/globals.css';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 function App() {
 	const queryClient = new QueryClient();
 	return (

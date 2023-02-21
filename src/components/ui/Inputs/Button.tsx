@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
-
 import clsx from 'clsx';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 const baseStyles: any = {
 	solid:
 		'inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors',

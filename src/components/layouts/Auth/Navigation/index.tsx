@@ -1,13 +1,19 @@
 import { logout as logoutApi } from 'api/user';
-
 import { Disclosure } from '@headlessui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import Logo from 'assets/img/vendorfied-1.png';
 
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+import Logo from 'assets/img/vendorfied-1.png';
 import { Button } from 'components/ui/Inputs/Button';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();

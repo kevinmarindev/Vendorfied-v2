@@ -1,7 +1,15 @@
 import { Outlet } from 'react-router-dom';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import Logo from 'assets/img/vendorfied.png';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Auth = () => (
 	<div className='flex h-screen w-screen overflow-scroll'>
 		<div className='mx-auto flex h-screen w-1/2 items-center justify-center bg-gradient-to-br from-blue-500/[.7] to-emerald-400/[.7]'>
