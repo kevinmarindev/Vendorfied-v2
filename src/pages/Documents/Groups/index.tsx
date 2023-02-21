@@ -1,19 +1,27 @@
+import React, { useState } from 'react';
 import { faChevronRight, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
-
 import { Formik } from 'formik';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import Card from 'components/ui/Card';
 import { Button } from 'components/ui/Inputs/Button';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 import Tabs from 'components/ui/Tabs';
+import { NewDocumentGroupModal } from 'components/ui/DocumentGroupModal';
 
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Groups = () => {
 	const location = useLocation();
 	console.log(location.pathname);
+	const [modal, setModal] = useState(false);
 	return (
 		<>
 			<h6 className='text-xl'>Document Management</h6>
@@ -43,7 +51,7 @@ export const Groups = () => {
 								onSubmit={(values) => {
 									console.log(values);
 								}}
-							>
+								>
 								{({ handleSubmit }) => (
 									<form
 										onSubmit={handleSubmit}
@@ -52,13 +60,14 @@ export const Groups = () => {
 										}}
 										className='block space-y-2 md:flex md:space-y-0 md:space-x-2'
 									>
-										<Text name='search' label='Search' className='w-full lg:w-56 ' />
+										<Text name='search' label='Search' className='w-full lg:w-56' />
 									</form>
 								)}
 							</Formik>
-							<Button className=' w-full md:w-1/4' variant='outline'>
-								New Document
+							<Button className=' w-full md:w-1/4' variant='outline' onClick={() => setModal(true)}>
+								<p className='text-brandBlue'>+ New Group</p>
 							</Button>
+							{modal && <NewDocumentGroupModal isOpen={modal && true} onClose={()=>setModal(!modal)} />}
 						</div>
 					</div>
 
