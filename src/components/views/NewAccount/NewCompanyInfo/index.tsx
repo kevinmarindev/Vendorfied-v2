@@ -1,10 +1,8 @@
 import { useRef, useState } from 'react';
 
 import clsx from 'clsx';
-import { Formik } from 'formik';
 import { useFormikContext } from 'formik';
 
-import { Button } from 'components/ui/Inputs/Button';
 import Text from 'components/ui/Inputs/Text';
 
 export const NewCompanyInfo = () => {
