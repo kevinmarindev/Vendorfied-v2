@@ -1,16 +1,22 @@
 import { faChevronRight, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from 'react-router-dom';
-
 import { Formik } from 'formik';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import Card from 'components/ui/Card';
 import { Button } from 'components/ui/Inputs/Button';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 import Tabs from 'components/ui/Tabs';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Groups = () => {
 	const location = useLocation();
 	console.log(location.pathname);

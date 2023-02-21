@@ -1,15 +1,21 @@
 import { faCheck, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-
 import { Formik } from 'formik';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import { Button } from 'components/ui/Inputs/Button';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Vendors = () => {
 	const navigate = useNavigate();
 	return (

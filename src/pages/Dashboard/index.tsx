@@ -1,16 +1,22 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { fetchUser } from 'api/user';
-
+import { Formik } from 'formik';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useQuery } from '@tanstack/react-query';
 
-import { Formik } from 'formik';
 
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+import { fetchUser } from 'api/user';
 import Card from 'components/ui/Card';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Dashboard = () => {
 	const { data: user } = useQuery({
 		queryKey: ['user'],
