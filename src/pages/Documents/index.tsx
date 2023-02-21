@@ -95,7 +95,7 @@ export const Documents = () => {
 								)}
 							</Formik>
 							<Button className=' w-full md:w-1/4' variant='outline'>
-								New Document
+							<p className='text-brandBlue'>+ New Document</p>
 							</Button>
 						</div>
 					</div>
@@ -116,10 +116,10 @@ export const Documents = () => {
 							<FontAwesomeIcon icon={faPencilAlt} className='text-xl text-primary' />
 							<FontAwesomeIcon icon={faDownload} className='text-xl text-primary' />
 						</div>
-						<div className='grid w-full grid-cols-3 gap-4 md:col-span-6 md:grid-cols-6 lg:grid-cols-10'>
-							<Button>Group1</Button>
-							<Button>Group2</Button>
-							<Button>Group3</Button>
+						<div className='grid w-full grid-cols-3 gap-4 pt-2 md:col-span-6 md:grid-cols-6 lg:grid-cols-10 '>
+							<Button className='bg-brandBlue'>Group1</Button>
+							<Button className='bg-brandBlue'>Group2</Button>
+							<Button className='bg-brandBlue'>Group3</Button>
 						</div>
 					</div>
 				</Card>
