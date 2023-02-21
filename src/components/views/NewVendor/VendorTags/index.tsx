@@ -1,9 +1,17 @@
 import { useFormikContext } from 'formik';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import { Button } from 'components/ui/Inputs/Button';
 import Select from 'components/ui/Inputs/Select';
 import Text from 'components/ui/Inputs/Text';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const VendorTags = () => {
 	const { handleSubmit, setFieldValue } = useFormikContext();
 
