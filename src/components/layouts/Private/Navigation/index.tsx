@@ -37,7 +37,7 @@ export const Navigation = () => {
 	});
 
 	const variants = {
-		current: 'inline-flex items-center border-b-2 px-1 pt-1 font-medium text-gray-900',
+		current: 'inline-flex items-center border-b-2 px-1 pt-1 font-medium text-gray-900 font-bold border-primary',
 		notCurrent:
 			'inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
 	};
@@ -107,7 +107,7 @@ export const Navigation = () => {
 											<Menu.Item>
 												{({ active }) => (
 													<div
-														className={clsx(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+														className={clsx(active ? 'bg-gray-100 ' : '', 'block px-4 py-2 text-sm text-gray-700')}
 													>
 														Settings
 													</div>
