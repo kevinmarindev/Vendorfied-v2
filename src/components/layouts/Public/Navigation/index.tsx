@@ -20,6 +20,10 @@ import Logo from 'assets/img/vendorfied-1.png';
 import Avatar from 'components/ui/Avatar';
 import { Button } from 'components/ui/Inputs/Button';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -45,7 +49,7 @@ export const Navigation = () => {
 	};
 
 	return (
-		<Disclosure as='nav' className=' sticky top-0 z-50 bg-white/[.50] '>
+		<Disclosure as='nav' className=' sticky top-0 z-50 bg-white '>
 			{({ open }) => (
 				<>
 					<div className='mx-4'>

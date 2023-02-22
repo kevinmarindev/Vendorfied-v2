@@ -7,13 +7,21 @@ import {
 	faPerson,
 	faPhoneAlt
 } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Logo from 'assets/img/vendorfied.png';
 
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
+import Logo from 'assets/img/vendorfied.png';
 import { Avatar } from '../Avatar';
 import Card from '../Card';
+
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
+
 
 export const VendorfiedCard = ({
 	title = 'Company Name',

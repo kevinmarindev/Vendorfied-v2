@@ -1,25 +1,23 @@
-import { login as loginApi } from 'api/user';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+
 
 // Application Screen || Define Imports
 // =================================================================================================
 // =================================================================================================
-// Application Screen || Define Exports
-// =================================================================================================
-// =================================================================================================
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Link } from 'react-router-dom';
-
-import { Formik } from 'formik';
-import * as Yup from 'yup';
-
+import { login as loginApi } from 'api/user';
 import Logo from 'assets/img/vendorfied-3.png';
-
 import { Button } from 'components/ui/Inputs/Button';
 import CheckBox from 'components/ui/Inputs/CheckBox';
 import Text from 'components/ui/Inputs/Text';
-
 import { User } from 'models/User';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const Login = () => {
 	const queryClient = useQueryClient();
 

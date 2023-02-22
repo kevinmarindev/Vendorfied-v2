@@ -1,10 +1,17 @@
 import { useRef, useState } from 'react';
-
 import clsx from 'clsx';
 import { useFormikContext } from 'formik';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import Text from 'components/ui/Inputs/Text';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const VendorDetails = () => {
 	const { setFieldValue } = useFormikContext();
 

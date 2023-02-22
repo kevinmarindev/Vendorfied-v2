@@ -1,11 +1,13 @@
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
-
 import { forwardRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import { Formik } from 'formik';
 
+
+// Application Screen || Define Imports
+// =================================================================================================
+// =================================================================================================
 import { Button } from 'components/ui/Inputs/Button';
 import VendorfiedCard from 'components/ui/VendorfiedCard';
 import PrimaryContact from 'components/views/NewVendor/PrimaryContact';
@@ -13,6 +15,10 @@ import VendorDetails from 'components/views/NewVendor/VendorDetails';
 import VendorInfo from 'components/views/NewVendor/VendorInfo';
 import VendorTags from 'components/views/NewVendor/VendorTags';
 
+
+// Application Screen || Define Exports
+// =================================================================================================
+// =================================================================================================
 export const NewVendor = () => {
 	const navigate = useNavigate();
 	const back = () => navigate(-1);
