@@ -12,7 +12,7 @@ import VendorfiedCard from 'components/ui/VendorfiedCard';
 export const Vendors = () => {
 	const navigate = useNavigate();
 	return (
-		<div className='p-4'>
+		<div className='p-4 md:p-8 2xl:pr-10 2xl:pl-10'>
 			<div className='pb-10 font-sans text-4xl font-bold'>Vendors</div>
 			<div
 				className='
@@ -36,12 +36,7 @@ export const Vendors = () => {
 					>
 						{({ handleSubmit }) => (
 							<form onSubmit={handleSubmit} className='flex w-full justify-between gap-2'>
-								<Text
-									label='Search'
-									name='search'
-									placeholder='Search'
-									className='w-48 bg-gray-200 text-primary focus:bg-white'
-								/>
+								<Text label='Search' name='search' placeholder='Search' className='w-48 text-primary' />
 								<div className='flex gap-2 font-squada text-primary'>
 									<Select
 										label='Status'

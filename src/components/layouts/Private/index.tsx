@@ -12,7 +12,7 @@ import Navigation from './Navigation';
 export const Private = () => (
 	<main className='relative h-screen w-full  overflow-scroll '>
 		<Navigation />
-		<section className='mx-auto max-w-full p-4 md:p-8 2xl:pr-10 2xl:pl-10'>
+		<section className='mx-auto max-w-full'>
 			<Outlet />
 		</section>
 	</main>
