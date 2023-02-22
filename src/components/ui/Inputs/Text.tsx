@@ -23,8 +23,9 @@ export const Text = ({
 
 	const inputClassName = clsx(
 		'focus:border-gray-500 focus:ring-gray-500',
-		'block rounded-md border border-gray-300 focus:border-gray-500 focus:ring-gray-500',
-		'text-md w-full',
+		'block rounded-xl border-2 border-gray-300 focus:border-gray-500 focus:ring-gray-500',
+		'justify-end pl-4',
+		'text-md w-full font-squada',
 		'disabled:opacity-50 disabled:cursor-not-allowed'
 	);
 
@@ -45,7 +46,7 @@ export const Text = ({
 						type='number'
 						name={name}
 						id={name}
-						className={`${inputClassName} justify-end pl-4`}
+						className={`${inputClassName} `}
 						placeholder={placeholder}
 						disabled={disabled}
 					/>

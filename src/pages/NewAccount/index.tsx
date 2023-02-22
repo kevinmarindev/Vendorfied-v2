@@ -59,7 +59,7 @@ export const NewAccount = () => {
 						<div className='hidden w-2/3 justify-center bg-gradient-to-br from-blue-500/[.5] to-emerald-400/[.4] p-2 md:flex lg:w-1/2'>
 							<div className='block flex-row text-center'>
 								<div className='inline-block'>
-									<div className='flex w-40 justify-center rounded-lg border border-primary bg-white p-1'>
+									<div className='mt-10 flex w-40 justify-center rounded-lg border border-primary bg-white p-1'>
 										<img className='w-24' src={Logo} />
 									</div>
 								</div>

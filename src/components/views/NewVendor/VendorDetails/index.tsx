@@ -83,7 +83,7 @@ export const VendorDetails = () => {
 					<div>
 						<p>Drop vendor logo here, or select</p>
 						<button
-							className=' cursor-pointer bg-transparent p-1 font-sora text-sm hover:underline'
+							className='cursor-pointer bg-transparent p-1 font-sora text-sm hover:underline'
 							onClick={onButtonClick}
 						>
 							Click to browse

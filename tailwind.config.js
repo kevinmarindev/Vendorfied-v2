@@ -19,6 +19,7 @@ module.exports = {
                 secondary: '#808080',
                 brandBlue: "#0075B6",
                 brandGreen: "#00AA7B",
+                lightBlue: "#f8f9fc"
             },
             fontFamily: {
                 squada: 'Squada One',
